@@ -7,7 +7,7 @@ user-invocable: true
 
 # Chapter test generator
 
-Builds printable practice tests for a secondary-school student (e.g. 3 vwo) from the chapter(s) the user names. Every run produces two tests at different difficulty levels, each with a separate answer key. All questions are bilingual: Dutch first, English directly below.
+Builds printable practice tests for a secondary-school student (e.g. 3 vwo) from the chapter(s) the user names. Every run produces two tests at different difficulty levels, each in a single Markdown file with the answers hidden in collapsed `<details>` sections. All questions are bilingual: Dutch first, English directly below.
 
 ## 1. Confirm the scope
 
@@ -71,24 +71,22 @@ For every question, including instructions, answer options and data tables:
 - The Dutch must be natural school Dutch, not word for word.
 - Answer lines and boxes appear once, after both language versions.
 
-## 5. Answer keys
+## 5. Hidden answers in the same file
 
-Each test gets its own answer key, in a **separate file**, so the test can be printed without answers.
-- Repeat each question in the answer key and place its model answer immediately underneath it; never collect all answers in one answer section at the end.
+Each test keeps its answers in the same Markdown file, hidden in a collapsed `<details>` block immediately underneath the question.
+- Put the question, then the bilingual answer in a collapsed `<details>` section directly below it; never group answers at the end.
 - Show the model answer bilingually, with a points breakdown ("1p for …, 1p for …") directly below that question's answer.
-- Acceptable alternatives for open questions.
-- The paragraph each question comes from (e.g. "§1.2"), so gaps can be traced back to the book.
-- At the end: the grade formula and a points-to-grade table, plus a short "If you scored low on … revisit §…" guide.
+- Include acceptable alternatives for open questions.
+- Add the paragraph each question comes from (e.g. "§1.2"), so gaps can be traced back to the book.
+- End the file with the grade formula and a points-to-grade table, plus a short "If you scored low on … revisit §…" guide.
 
 ## 6. Build the files
 
-Create four Markdown files directly. Do not create DOCX or PDF files for this skill:
+Create two Markdown files directly. Do not create DOCX or PDF files for this skill:
 - `<Subject>_<Chapter>_Test-A_Pass.md`
-- `<Subject>_<Chapter>_Test-A_Pass_AnswerKey.md`
 - `<Subject>_<Chapter>_Test-B_Excellent.md`
-- `<Subject>_<Chapter>_Test-B_Excellent_AnswerKey.md`
 
-Each test's Markdown header includes: subject, book, chapter/paragraphs, level, time (45 min), total points, and name/date lines for the student. Use headings, tables, italic Dutch text first and English translations in separate paragraphs, and answer lines made from underscores. Test files contain questions only; answer keys repeat each question with its answer directly below it. If a collapsible answer view is also generated for on-screen self-checking, place the answer immediately after its corresponding question rather than grouping answers at the end.
+Each test's Markdown header includes: subject, book, chapter/paragraphs, level, time (45 min), total points, and name/date lines for the student. Use headings, tables, italic Dutch text first and English translations in separate paragraphs, answer lines made from underscores, and collapsed `<details>` blocks for the answers immediately underneath each question. The test file contains both the questions and the hidden answers in one document.
 
 Save the finished files to `./output/<subject>/<topic>/`. Do not write outside the workspace unless the user explicitly asks.
 
@@ -98,8 +96,8 @@ Save the finished files to `./output/<subject>/<topic>/`. Do not write outside t
 - Generated questions reflect the captured question patterns without copying textbook assignments, and any visible textbook answers are used only to check validity and answer-key accuracy.
 - Points add up to the stated totals, and the RTTI mix matches the level targets.
 - Dutch and English say the same thing.
-- The answer keys match the question numbering.
-- In each answer key, every question is immediately followed by its bilingual answer, points breakdown, acceptable alternatives, and source paragraph where relevant; no answer-only block is appended at the end.
+- The hidden answer blocks match the question numbering.
+- In each question section, the bilingual answer, points breakdown, acceptable alternatives, and source paragraph appear immediately below that question; no answer-only block is appended at the end.
 - Confirm the Markdown renders correctly, including tables, headings, bilingual text, answer lines, and answer-key numbering.
 
 Finish with a short message: which paragraphs are covered, the number of questions and points per test, and where the files are.
