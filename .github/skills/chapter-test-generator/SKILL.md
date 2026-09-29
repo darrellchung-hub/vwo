@@ -9,6 +9,8 @@ user-invocable: true
 
 Builds printable practice tests for a secondary-school student (e.g. 3 vwo) from the chapter(s) the user names. Every run produces two tests at different difficulty levels, each in a single Markdown file with the answers hidden in collapsed `<details>` sections. All questions are bilingual: Dutch first, English directly below.
 
+Before generating or formatting test files, read and follow [design.md](design.md). It defines the shared visual style and Markdown portability rules.
+
 ## 1. Confirm the scope
 
 Ask only what isn't already clear from the request:

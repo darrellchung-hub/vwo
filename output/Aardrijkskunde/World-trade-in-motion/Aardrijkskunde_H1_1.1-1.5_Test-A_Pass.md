@@ -1,17 +1,40 @@
-## Aardrijkskunde / Geography – H1 World trade in motion: 1.1–1.5 – Test A / Pass level
+# Aardrijkskunde | Hoofdstuk 1: Wereldhandel in beweging | Toets A: Basisniveau
 
-| Veld / Field | Details / Details |
+**Geography | Chapter 1: World trade in motion | Test A: Pass level**
+
+| Gegeven | Informatie |
 |---|---|
-| Vak / Subject | Aardrijkskunde / Geography |
-| Boek / Book | buiteNLand 3 vwo Editie 5 English Edition + Bosatlas |
-| Hoofdstuk / Chapter | H1 World trade in motion: 1.1–1.5 |
-| Totaal / Total | 40 punten / points |
-| Tijd / Time | 45 minuten / minutes |
-| Naam / Name | ____________________    Datum / Date: __________ |
+| Vak | Aardrijkskunde |
+| Boek | buiteNLand 3 vwo Editie 5 English Edition + Bosatlas |
+| Hoofdstuk en paragrafen | Hoofdstuk 1, §1.1–§1.5 |
+| Niveau | Basisniveau |
+| Totaal | 42 punten |
+| Tijd | 45 minuten |
+| Naam en datum | ____________________    Datum: __________ |
 
-*Instructies: Beantwoord elke vraag. Nederlands staat eerst; Engels volgt eronder.*
+| Details | Information |
+|---|---|
+| Subject | Geography |
+| Book | buiteNLand 3 vwo Editie 5 English Edition + Bosatlas |
+| Chapter and paragraphs | Chapter 1, §1.1–§1.5 |
+| Level | Pass level |
+| Total | 42 points |
+| Time | 45 minutes |
+| Name and date | ____________________    Date: __________ |
 
-Instructions: Answer every question. Dutch comes first; English follows below it.
+*Instructies: Beantwoord alle vragen. De antwoorden staan verborgen onder elke vraag.*
+
+Instructions: Answer all questions. Answers are hidden below each question.
+
+**Tip bij uitlegvragen:**
+
+*Bij uitlegvragen: geef eerst een direct antwoord, leg daarna je redenering uit en koppel die terug aan de vraag.*
+
+**Tip for explanation questions:**
+
+For explanation questions: answer directly first, explain your reasoning, and link it back to the question.
+
+---
 
 ## 1. [R, 2p]
 *Wat is globalisatie?*
@@ -21,23 +44,35 @@ What is globalisation?
 ________________________________________________________________________________
 
 <details>
-<summary>Antwoord / Answer</summary>
+<summary><em>Antwoord tonen</em><br>Show answer</summary>
 
-*Wat is globalisatie?*
+**Bron:** §1.1, §1.2
 
-What is globalisation?
+**Source:** §1.1, §1.2
 
-**Modelantwoord / Model answer:**
+**Modelantwoord:**
 
 *Globalisatie is het steeds sterker met elkaar verbinden van landen en mensen door handel, vervoer, informatie en cultuur.*
 
+**Model answer:**
+
 Globalisation is the increasing connection of countries and people through trade, transport, information and culture.
 
-**Punten / Points breakdown:**
+**Punten:**
 
 1p voor het verbinden van landen en mensen; 1p voor een voorbeeld van handel, vervoer, informatie of cultuur.
 
-**Bron / Source:** §1.1, §1.2
+**Points:**
+
+1p for defining the connection between countries and people; 1p for an example such as trade, transport, information, or culture.
+
+**Andere goede antwoorden:**
+
+Andere inhoudelijk juiste antwoorden op basis van de hoofdstuktheorie zijn ook goed.
+
+**Other acceptable answers:**
+
+Other substantively correct answers based on the chapter content are also acceptable.
 
 </details>
 
@@ -49,23 +84,35 @@ Name two reasons why world trade works differently today than it did a hundred y
 ________________________________________________________________________________
 
 <details>
-<summary>Antwoord / Answer</summary>
+<summary><em>Antwoord tonen</em><br>Show answer</summary>
 
-*Noem twee redenen waarom de wereldhandel tegenwoordig anders werkt dan honderd jaar geleden.*
+**Bron:** §1.1, §1.2
 
-Name two reasons why world trade works differently today than it did a hundred years ago.
+**Source:** §1.1, §1.2
 
-**Modelantwoord / Model answer:**
+**Modelantwoord:**
 
 *Vandaag is de productie verdeeld over verschillende landen; transport is sneller en goedkoper door containers en ICT; landen in de semiperiferie zijn veel belangrijker geworden.*
 
+**Model answer:**
+
 Today, production is spread across different countries; transport is faster and cheaper because of containers and ICT; countries in the semi-periphery are much more important.
 
-**Punten / Points breakdown:**
+**Punten:**
 
 1p voor elk goed genoemd verschil; 1p voor een tweede relevant verschil.
 
-**Bron / Source:** §1.1, §1.2
+**Points:**
+
+1p for each correct difference, up to 2p total.
+
+**Andere goede antwoorden:**
+
+Andere inhoudelijk juiste antwoorden op basis van de hoofdstuktheorie zijn ook goed.
+
+**Other acceptable answers:**
+
+Other substantively correct answers based on the chapter content are also acceptable.
 
 </details>
 
@@ -77,23 +124,35 @@ What is offshoring?
 ________________________________________________________________________________
 
 <details>
-<summary>Antwoord / Answer</summary>
+<summary><em>Antwoord tonen</em><br>Show answer</summary>
 
-*Wat is offshoring?*
+**Bron:** §1.1
 
-What is offshoring?
+**Source:** §1.1
 
-**Modelantwoord / Model answer:**
+**Modelantwoord:**
 
 *Offshoring is het verplaatsen van een deel van de productie of diensten naar het buitenland, vaak naar landen met lagere lonen.*
 
+**Model answer:**
+
 Offshoring is moving part of production or services abroad, often to countries with lower wages.
 
-**Punten / Points breakdown:**
+**Punten:**
 
 1p voor verhuizen van productie; 1p voor het buitenland/lage lonen.
 
-**Bron / Source:** §1.1
+**Points:**
+
+1p for moving production or services; 1p for moving them abroad, often to lower-wage countries.
+
+**Andere goede antwoorden:**
+
+Andere inhoudelijk juiste antwoorden op basis van de hoofdstuktheorie zijn ook goed.
+
+**Other acceptable answers:**
+
+Other substantively correct answers based on the chapter content are also acceptable.
 
 </details>
 
@@ -105,23 +164,35 @@ What is reshoring?
 ________________________________________________________________________________
 
 <details>
-<summary>Antwoord / Answer</summary>
+<summary><em>Antwoord tonen</em><br>Show answer</summary>
 
-*Wat is reshoring?*
+**Bron:** §1.1
 
-What is reshoring?
+**Source:** §1.1
 
-**Modelantwoord / Model answer:**
+**Modelantwoord:**
 
 *Reshoring is het terughalen van een deel van de productie naar het thuisland.*
 
+**Model answer:**
+
 Reshoring is bringing part of production back to the home country.
 
-**Punten / Points breakdown:**
+**Punten:**
 
 1p voor terughalen van productie; 1p voor het thuisland.
 
-**Bron / Source:** §1.1
+**Points:**
+
+1p for bringing production back; 1p for returning it to the home country.
+
+**Andere goede antwoorden:**
+
+Andere inhoudelijk juiste antwoorden op basis van de hoofdstuktheorie zijn ook goed.
+
+**Other acceptable answers:**
+
+Other substantively correct answers based on the chapter content are also acceptable.
 
 </details>
 
@@ -133,23 +204,35 @@ What do you mean by a multipolar world economy?
 ________________________________________________________________________________
 
 <details>
-<summary>Antwoord / Answer</summary>
+<summary><em>Antwoord tonen</em><br>Show answer</summary>
 
-*Wat bedoel je met een multipolaire wereldeconomie?*
+**Bron:** §1.1
 
-What do you mean by a multipolar world economy?
+**Source:** §1.1
 
-**Modelantwoord / Model answer:**
+**Modelantwoord:**
 
 *Een multipolaire wereldeconomie is een economie waarin belangrijke economische centra zich op meerdere plaatsen in de wereld bevinden.*
 
+**Model answer:**
+
 A multipolar world economy is an economy in which important economic centres are located in several places in the world.
 
-**Punten / Points breakdown:**
+**Punten:**
 
 1p voor meerdere economische centra; 1p voor het idee van meerdere plekken in de wereld.
 
-**Bron / Source:** §1.1
+**Points:**
+
+1p for identifying multiple economic centres; 1p for locating them in several parts of the world.
+
+**Andere goede antwoorden:**
+
+Andere inhoudelijk juiste antwoorden op basis van de hoofdstuktheorie zijn ook goed.
+
+**Other acceptable answers:**
+
+Other substantively correct answers based on the chapter content are also acceptable.
 
 </details>
 
@@ -161,23 +244,35 @@ What does free trade mean?
 ________________________________________________________________________________
 
 <details>
-<summary>Antwoord / Answer</summary>
+<summary><em>Antwoord tonen</em><br>Show answer</summary>
 
-*Wat betekent vrije handel?*
+**Bron:** §1.1
 
-What does free trade mean?
+**Source:** §1.1
 
-**Modelantwoord / Model answer:**
+**Modelantwoord:**
 
 *Vrije handel betekent dat er weinig grenzen of belemmeringen zijn voor de handel tussen landen.*
 
+**Model answer:**
+
 Free trade means there are few borders or barriers to trade between countries.
 
-**Punten / Points breakdown:**
+**Punten:**
 
 1p voor weinig belemmeringen; 1p voor het idee van handel tussen landen.
 
-**Bron / Source:** §1.1
+**Points:**
+
+1p for identifying that there are few barriers; 1p for linking this to trade between countries.
+
+**Andere goede antwoorden:**
+
+Andere inhoudelijk juiste antwoorden op basis van de hoofdstuktheorie zijn ook goed.
+
+**Other acceptable answers:**
+
+Other substantively correct answers based on the chapter content are also acceptable.
 
 </details>
 
@@ -189,23 +284,35 @@ What is the WTO?
 ________________________________________________________________________________
 
 <details>
-<summary>Antwoord / Answer</summary>
+<summary><em>Antwoord tonen</em><br>Show answer</summary>
 
-*Wat is de WTO?*
+**Bron:** §1.1
 
-What is the WTO?
+**Source:** §1.1
 
-**Modelantwoord / Model answer:**
+**Modelantwoord:**
 
 *De WTO is de Wereldhandelsorganisatie; deze wil handel tussen landen verder vrijmaken.*
 
+**Model answer:**
+
 The WTO is the World Trade Organisation; it wants to make trade between countries even more free.
 
-**Punten / Points breakdown:**
+**Punten:**
 
 1p voor Wereldhandelsorganisatie; 1p voor het doel van vrijere handel.
 
-**Bron / Source:** §1.1
+**Points:**
+
+1p for naming the World Trade Organization; 1p for its aim of making trade freer.
+
+**Andere goede antwoorden:**
+
+Andere inhoudelijk juiste antwoorden op basis van de hoofdstuktheorie zijn ook goed.
+
+**Other acceptable answers:**
+
+Other substantively correct answers based on the chapter content are also acceptable.
 
 </details>
 
@@ -217,23 +324,35 @@ Which countries are usually called core countries?
 ________________________________________________________________________________
 
 <details>
-<summary>Antwoord / Answer</summary>
+<summary><em>Antwoord tonen</em><br>Show answer</summary>
 
-*Welke landen worden meestal als kernlanden genoemd?*
+**Bron:** §1.2–§1.4
 
-Which countries are usually called core countries?
+**Source:** §1.2–§1.4
 
-**Modelantwoord / Model answer:**
+**Modelantwoord:**
 
 *Historisch gezien zijn dat vooral landen in Europa en Noord-Amerika, zoals Duitsland, de VS en andere rijke industriële landen.*
 
+**Model answer:**
+
 Historically, these are mainly countries in Europe and North America, such as Germany, the USA and other wealthy industrial countries.
 
-**Punten / Points breakdown:**
+**Punten:**
 
 1p voor rijke of industriële landen; 1p voor een goed voorbeeld uit Europa of Noord-Amerika.
 
-**Bron / Source:** §1.2–§1.4
+**Points:**
+
+1p for identifying wealthy or industrial countries; 1p for a suitable example from Europe or North America.
+
+**Andere goede antwoorden:**
+
+Andere inhoudelijk juiste antwoorden op basis van de hoofdstuktheorie zijn ook goed.
+
+**Other acceptable answers:**
+
+Other substantively correct answers based on the chapter content are also acceptable.
 
 </details>
 
@@ -245,23 +364,35 @@ Name one difference between core countries and countries in the semi-periphery.
 ________________________________________________________________________________
 
 <details>
-<summary>Antwoord / Answer</summary>
+<summary><em>Antwoord tonen</em><br>Show answer</summary>
 
-*Noem één verschil tussen kernlanden en landen in de semiperiferie.*
+**Bron:** §1.2, §1.3
 
-Name one difference between core countries and countries in the semi-periphery.
+**Source:** §1.2, §1.3
 
-**Modelantwoord / Model answer:**
+**Modelantwoord:**
 
 *Kernlanden hebben meestal een hogere economische macht en meer technologie, terwijl landen in de semiperiferie vaak nog bezig zijn met industrialisatie en groei.*
 
+**Model answer:**
+
 Core countries usually have greater economic power and more technology, while countries in the semi-periphery are often still industrialising and growing.
 
-**Punten / Points breakdown:**
+**Punten:**
 
 1p voor economische macht of technologie; 1p voor groei of industrialisatie in semiperiferie.
 
-**Bron / Source:** §1.2, §1.3
+**Points:**
+
+1p for a difference in economic power or technology; 1p for growth or industrialisation in the semi-periphery.
+
+**Andere goede antwoorden:**
+
+Andere inhoudelijk juiste antwoorden op basis van de hoofdstuktheorie zijn ook goed.
+
+**Other acceptable answers:**
+
+Other substantively correct answers based on the chapter content are also acceptable.
 
 </details>
 
@@ -273,23 +404,35 @@ Explain why MNOs often have products made in low-wage countries.
 ________________________________________________________________________________
 
 <details>
-<summary>Antwoord / Answer</summary>
+<summary><em>Antwoord tonen</em><br>Show answer</summary>
 
-*Leg uit waarom MNO’s producten vaak in lage-loonlanden laten maken.*
+**Bron:** §1.1
 
-Explain why MNOs often have products made in low-wage countries.
+**Source:** §1.1
 
-**Modelantwoord / Model answer:**
+**Modelantwoord:**
 
 *Omdat de productiekosten daar lager zijn. Dat geeft MNO’s meer winst en maakt het goedkoper om goederen te produceren.*
 
+**Model answer:**
+
 Because production costs are lower there. This gives MNOs more profit and makes it cheaper to produce goods.
 
-**Punten / Points breakdown:**
+**Punten:**
 
 1p voor lagere productiekosten; 1p voor hogere winst of lagere kosten.
 
-**Bron / Source:** §1.1
+**Points:**
+
+1p for lower production costs; 1p for the resulting higher profit or lower costs.
+
+**Andere goede antwoorden:**
+
+Andere inhoudelijk juiste antwoorden op basis van de hoofdstuktheorie zijn ook goed.
+
+**Other acceptable answers:**
+
+Other substantively correct answers based on the chapter content are also acceptable.
 
 </details>
 
@@ -301,23 +444,35 @@ How has the container changed world trade?
 ________________________________________________________________________________
 
 <details>
-<summary>Antwoord / Answer</summary>
+<summary><em>Antwoord tonen</em><br>Show answer</summary>
 
-*Hoe heeft de container de wereldhandel veranderd?*
+**Bron:** §1.1
 
-How has the container changed world trade?
+**Source:** §1.1
 
-**Modelantwoord / Model answer:**
+**Modelantwoord:**
 
 *De container heeft het transport van goederen sneller en goedkoper gemaakt, waardoor producten wereldwijd makkelijker kunnen worden verscheept.*
 
+**Model answer:**
+
 The container has made transporting goods faster and cheaper, making it easier to ship products around the world.
 
-**Punten / Points breakdown:**
+**Punten:**
 
 1p voor sneller en goedkoper transport; 1p voor makkelijker wereldwijd vervoer.
 
-**Bron / Source:** §1.1
+**Points:**
+
+1p for faster and cheaper transport; 1p for easier worldwide shipping.
+
+**Andere goede antwoorden:**
+
+Andere inhoudelijk juiste antwoorden op basis van de hoofdstuktheorie zijn ook goed.
+
+**Other acceptable answers:**
+
+Other substantively correct answers based on the chapter content are also acceptable.
 
 </details>
 
@@ -329,23 +484,35 @@ Why can trade barriers affect world trade?
 ________________________________________________________________________________
 
 <details>
-<summary>Antwoord / Answer</summary>
+<summary><em>Antwoord tonen</em><br>Show answer</summary>
 
-*Waarom kunnen handelsbarrières de wereldhandel beïnvloeden?*
+**Bron:** §1.1
 
-Why can trade barriers affect world trade?
+**Source:** §1.1
 
-**Modelantwoord / Model answer:**
+**Modelantwoord:**
 
 *Handelsbarrières verhogen de kosten of beperken de invoer, waardoor handel minder vrij kan verlopen en landen minder met elkaar kunnen handelen.*
 
+**Model answer:**
+
 Trade barriers increase costs or limit imports, so trade cannot proceed as freely and countries trade less with each other.
 
-**Punten / Points breakdown:**
+**Punten:**
 
 1p voor hogere kosten of beperkingen; 1p voor minder handel of vrije handel.
 
-**Bron / Source:** §1.1
+**Points:**
+
+1p for higher costs or import restrictions; 1p for the resulting reduction in free trade or trade volume.
+
+**Andere goede antwoorden:**
+
+Andere inhoudelijk juiste antwoorden op basis van de hoofdstuktheorie zijn ook goed.
+
+**Other acceptable answers:**
+
+Other substantively correct answers based on the chapter content are also acceptable.
 
 </details>
 
@@ -357,23 +524,35 @@ Give two reasons why countries in the semi-periphery can grow faster.
 ________________________________________________________________________________
 
 <details>
-<summary>Antwoord / Answer</summary>
+<summary><em>Antwoord tonen</em><br>Show answer</summary>
 
-*Geef twee redenen waarom landen in de semiperiferie sneller kunnen groeien.*
+**Bron:** §1.1, §1.2
 
-Give two reasons why countries in the semi-periphery can grow faster.
+**Source:** §1.1, §1.2
 
-**Modelantwoord / Model answer:**
+**Modelantwoord:**
 
 *Ze kunnen profiteren van goedkope arbeidskrachten, nieuwe technologie en een groeiende binnenlandse markt.*
 
+**Model answer:**
+
 They can benefit from low labour costs, new technology and a growing domestic market.
 
-**Punten / Points breakdown:**
+**Punten:**
 
 1p voor elk goed genoemd argument.
 
-**Bron / Source:** §1.1, §1.2
+**Points:**
+
+1p for each valid reason.
+
+**Andere goede antwoorden:**
+
+Andere inhoudelijk juiste antwoorden op basis van de hoofdstuktheorie zijn ook goed.
+
+**Other acceptable answers:**
+
+Other substantively correct answers based on the chapter content are also acceptable.
 
 </details>
 
@@ -385,23 +564,35 @@ Why are differences in development often linked to colonial history?
 ________________________________________________________________________________
 
 <details>
-<summary>Antwoord / Answer</summary>
+<summary><em>Antwoord tonen</em><br>Show answer</summary>
 
-*Waarom hebben ontwikkelingsverschillen vaak te maken met koloniale geschiedenis?*
+**Bron:** §1.2, §1.3
 
-Why are differences in development often linked to colonial history?
+**Source:** §1.2, §1.3
 
-**Modelantwoord / Model answer:**
+**Modelantwoord:**
 
 *Koloniën werden vaak gebruikt voor grondstoffen en winst, waardoor de economische structuur van veel landen nog steeds ongelijk is.*
 
+**Model answer:**
+
 Colonies were often used for raw materials and profits, so the economic structure of many countries remains unequal.
 
-**Punten / Points breakdown:**
+**Punten:**
 
 1p voor koloniale exploitatie of structuur; 1p voor blijvende ongelijkheid.
 
-**Bron / Source:** §1.2, §1.3
+**Points:**
+
+1p for colonial exploitation or its effect on economic structures; 1p for continuing inequality.
+
+**Andere goede antwoorden:**
+
+Andere inhoudelijk juiste antwoorden op basis van de hoofdstuktheorie zijn ook goed.
+
+**Other acceptable answers:**
+
+Other substantively correct answers based on the chapter content are also acceptable.
 
 </details>
 
@@ -413,23 +604,35 @@ Explain why an economic centre can shift.
 ________________________________________________________________________________
 
 <details>
-<summary>Antwoord / Answer</summary>
+<summary><em>Antwoord tonen</em><br>Show answer</summary>
 
-*Leg uit waarom een economisch centrum kan verschuiven.*
+**Bron:** §1.1
 
-Explain why an economic centre can shift.
+**Source:** §1.1
 
-**Modelantwoord / Model answer:**
+**Modelantwoord:**
 
 *Een economisch centrum verschuift wanneer nieuwe landen steeds meer investeren, produceren en handelen, waardoor de zwaartekracht van de economie verandert.*
 
+**Model answer:**
+
 An economic centre shifts when new countries invest, produce and trade more, changing the centre of gravity of the economy.
 
-**Punten / Points breakdown:**
+**Punten:**
 
 1p voor nieuwe groei of investeringen; 1p voor verandering in economische zwaartekracht.
 
-**Bron / Source:** §1.1
+**Points:**
+
+1p for growth or investment in new countries; 1p for the resulting shift in economic influence.
+
+**Andere goede antwoorden:**
+
+Andere inhoudelijk juiste antwoorden op basis van de hoofdstuktheorie zijn ook goed.
+
+**Other acceptable answers:**
+
+Other substantively correct answers based on the chapter content are also acceptable.
 
 </details>
 
@@ -441,23 +644,35 @@ What is the main difference between the trade network of 1900 and today?
 ________________________________________________________________________________
 
 <details>
-<summary>Antwoord / Answer</summary>
+<summary><em>Antwoord tonen</em><br>Show answer</summary>
 
-*Wat is het grootste verschil tussen het handelsnetwerk van 1900 en vandaag de dag?*
+**Bron:** §1.1, §1.2
 
-What is the main difference between the trade network of 1900 and today?
+**Source:** §1.1, §1.2
 
-**Modelantwoord / Model answer:**
+**Modelantwoord:**
 
 *In 1900 was Europa en Noord-Amerika het belangrijkste centrum; nu zijn meer landen, vooral in de semiperiferie, betrokken en zijn de netwerken veel wereldwijder.*
 
+**Model answer:**
+
 In 1900 Europe and North America were the main centres; now more countries, especially in the semi-periphery, are involved and the networks are far more global.
 
-**Punten / Points breakdown:**
+**Punten:**
 
 1p voor vroeger Europa/Noord-Amerika; 1p voor meer mondiale verspreiding nu.
 
-**Bron / Source:** §1.1, §1.2
+**Points:**
+
+1p for Europe and North America as the main centres in 1900; 1p for the wider global network today.
+
+**Andere goede antwoorden:**
+
+Andere inhoudelijk juiste antwoorden op basis van de hoofdstuktheorie zijn ook goed.
+
+**Other acceptable answers:**
+
+Other substantively correct answers based on the chapter content are also acceptable.
 
 </details>
 
@@ -469,23 +684,35 @@ What is the development gap?
 ________________________________________________________________________________
 
 <details>
-<summary>Antwoord / Answer</summary>
+<summary><em>Antwoord tonen</em><br>Show answer</summary>
 
-*Wat is de ontwikkelingskloof?*
+**Bron:** §1.3
 
-What is the development gap?
+**Source:** §1.3
 
-**Modelantwoord / Model answer:**
+**Modelantwoord:**
 
 *De ontwikkelingskloof is het verschil in welvaart, technologie en levensstandaard tussen rijke en arme landen.*
 
+**Model answer:**
+
 The development gap is the difference in wealth, technology and living standards between rich and poor countries.
 
-**Punten / Points breakdown:**
+**Punten:**
 
 1p voor welvaart of levensstandaard; 1p voor verschil tussen rijke en arme landen.
 
-**Bron / Source:** §1.3
+**Points:**
+
+1p for wealth or standard of living; 1p for the difference between richer and poorer countries.
+
+**Andere goede antwoorden:**
+
+Andere inhoudelijk juiste antwoorden op basis van de hoofdstuktheorie zijn ook goed.
+
+**Other acceptable answers:**
+
+Other substantively correct answers based on the chapter content are also acceptable.
 
 </details>
 
@@ -497,23 +724,35 @@ What role did Europe play in world trade in the past?
 ________________________________________________________________________________
 
 <details>
-<summary>Antwoord / Answer</summary>
+<summary><em>Antwoord tonen</em><br>Show answer</summary>
 
-*Welke rol speelde Europa vroeger in de wereldhandel?*
+**Bron:** §1.2, §1.4
 
-What role did Europe play in world trade in the past?
+**Source:** §1.2, §1.4
 
-**Modelantwoord / Model answer:**
+**Modelantwoord:**
 
 *Europa was een belangrijk centrum van handel, productie en koloniale invloed, en controleerde veel handelsroutes en koloniën.*
 
+**Model answer:**
+
 Europe was an important centre of trade, production and colonial influence, controlling many trade routes and colonies.
 
-**Punten / Points breakdown:**
+**Punten:**
 
 1p voor centrum van handel/industrie; 1p voor koloniale invloed of routes.
 
-**Bron / Source:** §1.2, §1.4
+**Points:**
+
+1p for Europe as a centre of trade or industry; 1p for colonial influence or control of routes.
+
+**Andere goede antwoorden:**
+
+Andere inhoudelijk juiste antwoorden op basis van de hoofdstuktheorie zijn ook goed.
+
+**Other acceptable answers:**
+
+Other substantively correct answers based on the chapter content are also acceptable.
 
 </details>
 
@@ -525,23 +764,35 @@ Why is the Netherlands an important country for world trade?
 ________________________________________________________________________________
 
 <details>
-<summary>Antwoord / Answer</summary>
+<summary><em>Antwoord tonen</em><br>Show answer</summary>
 
-*Waarom is Nederland een belangrijk land voor de wereldhandel?*
+**Bron:** §1.5
 
-Why is the Netherlands an important country for world trade?
+**Source:** §1.5
 
-**Modelantwoord / Model answer:**
+**Modelantwoord:**
 
 *Nederland heeft een uitstekende ligging, grote havens en een sterke logistieke infrastructuur, waardoor goederen makkelijk worden verwerkt en doorvervoerd.*
 
+**Model answer:**
+
 The Netherlands has an excellent location, large ports and strong logistics infrastructure, so goods are processed and transferred easily.
 
-**Punten / Points breakdown:**
+**Punten:**
 
 1p voor ligging of havens; 1p voor logistiek of doorvoer.
 
-**Bron / Source:** §1.5
+**Points:**
+
+1p for location or ports; 1p for logistics or transit.
+
+**Andere goede antwoorden:**
+
+Andere inhoudelijk juiste antwoorden op basis van de hoofdstuktheorie zijn ook goed.
+
+**Other acceptable answers:**
+
+Other substantively correct answers based on the chapter content are also acceptable.
 
 </details>
 
@@ -553,23 +804,35 @@ Explain why Rotterdam is an important trading place.
 ________________________________________________________________________________
 
 <details>
-<summary>Antwoord / Answer</summary>
+<summary><em>Antwoord tonen</em><br>Show answer</summary>
 
-*Leg uit waarom Rotterdam een belangrijke handelsplaats is.*
+**Bron:** §1.5
 
-Explain why Rotterdam is an important trading place.
+**Source:** §1.5
 
-**Modelantwoord / Model answer:**
+**Modelantwoord:**
 
 *Rotterdam is belangrijk omdat het een grote haven heeft en veel goederen via de EU en de rest van de wereld doorvoert.*
 
+**Model answer:**
+
 Rotterdam is important because it has a large port and routes a great deal of goods through the EU and the rest of the world.
 
-**Punten / Points breakdown:**
+**Punten:**
 
 1p voor haven; 1p voor doorvoer of internationale connectie.
 
-**Bron / Source:** §1.5
+**Points:**
+
+1p for the port; 1p for transit or international connections.
+
+**Andere goede antwoorden:**
+
+Andere inhoudelijk juiste antwoorden op basis van de hoofdstuktheorie zijn ook goed.
+
+**Other acceptable answers:**
+
+Other substantively correct answers based on the chapter content are also acceptable.
 
 </details>
 
@@ -581,44 +844,66 @@ Name two things that have increased world trade since 1980.
 ________________________________________________________________________________
 
 <details>
-<summary>Antwoord / Answer</summary>
+<summary><em>Antwoord tonen</em><br>Show answer</summary>
 
-*Noem twee dingen die de wereldhandel hebben vergroot sinds 1980.*
+**Bron:** §1.1
 
-Name two things that have increased world trade since 1980.
+**Source:** §1.1
 
-**Modelantwoord / Model answer:**
+**Modelantwoord:**
 
 *De verdeling van de productieketen, de container en ICT hebben de wereldhandel vergroot.*
 
+**Model answer:**
+
 The division of the production chain, the container and ICT have increased world trade.
 
-**Punten / Points breakdown:**
+**Punten:**
 
 1p voor elk goed genoemd voorbeeld.
 
-**Bron / Source:** §1.1
+**Points:**
+
+1p for each valid example, up to 2p.
+
+**Andere goede antwoorden:**
+
+Andere inhoudelijk juiste antwoorden op basis van de hoofdstuktheorie zijn ook goed.
+
+**Other acceptable answers:**
+
+Other substantively correct answers based on the chapter content are also acceptable.
 
 </details>
 
-## Grading / Beoordeling
+---
 
-Grade / Cijfer = 1 + 9 × (points scored / total points), rounded to one decimal. / Cijfer = 1 + 9 × (behaalde punten / totaal aantal punten), afgerond op één decimaal.
+## Beoordeling
 
-| Punten / Points | Cijfer / Grade | Herhaal / Review |
+*Cijfer = 1 + 9 × (behaalde punten / totaal aantal punten), afgerond op één decimaal.*
+
+| Punten | Cijfer | Herhalen |
 |---:|---:|---|
-| 0 | 1.0 | Herhaal §1.1 / Review §1.1 |
-| 10 | 3.0 | Herhaal §1.2 / Review §1.2 |
-| 20 | 5.0 | Herhaal §1.3 / Review §1.3 |
-| 22 | 5.4 | Herhaal §1.3 / Review §1.3 |
-| 24 | 5.8 | Herhaal §1.3 / Review §1.3 |
-| 26 | 6.2 | Herhaal §1.4 / Review §1.4 |
-| 28 | 6.6 | Herhaal §1.4 / Review §1.4 |
-| 30 | 7.0 | Herhaal §1.4 / Review §1.4 |
-| 32 | 7.4 | Herhaal §1.5 / Review §1.5 |
-| 34 | 7.8 | Herhaal §1.5 / Review §1.5 |
-| 36 | 8.2 | Blijf oefenen / Keep practising |
-| 38 | 8.6 | Blijf oefenen / Keep practising |
-| 40 | 9.0 | Blijf oefenen / Keep practising |
+| 0 | 1,0 | Herhaal §1.1–§1.2 |
+| 10 | 3,1 | Herhaal §1.1–§1.2 |
+| 20 | 5,3 | Herhaal §1.3 |
+| 30 | 7,4 | Herhaal §1.4–§1.5 |
+| 40 | 9,6 | Herhaal §1.4–§1.5 |
+| 42 | 10,0 | Alles beheerst |
 
-Als je laag scoorde op globalisatie of handel, herhaal dan eerst §1.1 en §1.2. / If you scored low on globalisation or trade, revisit §1.1 and §1.2 first.
+## Grading
+
+Grade = 1 + 9 × (points scored / total points), rounded to one decimal place.
+
+| Points | Grade | Review |
+|---:|---:|---|
+| 0 | 1.0 | Review §1.1–§1.2 |
+| 10 | 3.1 | Review §1.1–§1.2 |
+| 20 | 5.3 | Review §1.3 |
+| 30 | 7.4 | Review §1.4–§1.5 |
+| 40 | 9.6 | Review §1.4–§1.5 |
+| 42 | 10.0 | All topics mastered |
+
+*Als wereldhandel of globalisering lastig was, herhaal §1.1–§1.2. Voor ontwikkelingsverschillen herhaal §1.3. Voor Europa en Nederland herhaal §1.4–§1.5.*
+
+If world trade or globalisation was difficult, review §1.1–§1.2. For development differences, review §1.3. For Europe and the Netherlands, review §1.4–§1.5.
