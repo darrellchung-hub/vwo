@@ -36,7 +36,7 @@ For explanation questions: answer directly first, explain your reasoning, and li
 
 ---
 
-## 1. [R, 2p]
+## 1. <small>[R, 2p]</small>
 *Wat is globalisatie?*
 
 What is globalisation?
@@ -76,7 +76,7 @@ Other substantively correct answers based on the chapter content are also accept
 
 </details>
 
-## 2. [R, 2p]
+## 2. <small>[R, 2p]</small>
 *Noem twee redenen waarom de wereldhandel tegenwoordig anders werkt dan honderd jaar geleden.*
 
 Name two reasons why world trade works differently today than it did a hundred years ago.
@@ -116,7 +116,7 @@ Other substantively correct answers based on the chapter content are also accept
 
 </details>
 
-## 3. [R, 2p]
+## 3. <small>[R, 2p]</small>
 *Wat is offshoring?*
 
 What is offshoring?
@@ -156,7 +156,7 @@ Other substantively correct answers based on the chapter content are also accept
 
 </details>
 
-## 4. [R, 2p]
+## 4. <small>[R, 2p]</small>
 *Wat is reshoring?*
 
 What is reshoring?
@@ -196,7 +196,7 @@ Other substantively correct answers based on the chapter content are also accept
 
 </details>
 
-## 5. [R, 2p]
+## 5. <small>[R, 2p]</small>
 *Wat bedoel je met een multipolaire wereldeconomie?*
 
 What do you mean by a multipolar world economy?
@@ -236,7 +236,7 @@ Other substantively correct answers based on the chapter content are also accept
 
 </details>
 
-## 6. [R, 2p]
+## 6. <small>[R, 2p]</small>
 *Wat betekent vrije handel?*
 
 What does free trade mean?
@@ -276,7 +276,7 @@ Other substantively correct answers based on the chapter content are also accept
 
 </details>
 
-## 7. [R, 2p]
+## 7. <small>[R, 2p]</small>
 *Wat is de WTO?*
 
 What is the WTO?
@@ -316,7 +316,7 @@ Other substantively correct answers based on the chapter content are also accept
 
 </details>
 
-## 8. [R, 2p]
+## 8. <small>[R, 2p]</small>
 *Welke landen worden meestal als kernlanden genoemd?*
 
 Which countries are usually called core countries?
@@ -356,7 +356,7 @@ Other substantively correct answers based on the chapter content are also accept
 
 </details>
 
-## 9. [R, 2p]
+## 9. <small>[R, 2p]</small>
 *Noem één verschil tussen kernlanden en landen in de semiperiferie.*
 
 Name one difference between core countries and countries in the semi-periphery.
@@ -396,7 +396,7 @@ Other substantively correct answers based on the chapter content are also accept
 
 </details>
 
-## 10. [T1, 2p]
+## 10. <small>[T1, 2p]</small>
 *Leg uit waarom MNO’s producten vaak in lage-loonlanden laten maken.*
 
 Explain why MNOs often have products made in low-wage countries.
@@ -436,7 +436,7 @@ Other substantively correct answers based on the chapter content are also accept
 
 </details>
 
-## 11. [T1, 2p]
+## 11. <small>[T1, 2p]</small>
 *Hoe heeft de container de wereldhandel veranderd?*
 
 How has the container changed world trade?
@@ -476,7 +476,7 @@ Other substantively correct answers based on the chapter content are also accept
 
 </details>
 
-## 12. [T1, 2p]
+## 12. <small>[T1, 2p]</small>
 *Waarom kunnen handelsbarrières de wereldhandel beïnvloeden?*
 
 Why can trade barriers affect world trade?
@@ -516,7 +516,7 @@ Other substantively correct answers based on the chapter content are also accept
 
 </details>
 
-## 13. [T1, 2p]
+## 13. <small>[T1, 2p]</small>
 *Geef twee redenen waarom landen in de semiperiferie sneller kunnen groeien.*
 
 Give two reasons why countries in the semi-periphery can grow faster.
@@ -556,7 +556,7 @@ Other substantively correct answers based on the chapter content are also accept
 
 </details>
 
-## 14. [T1, 2p]
+## 14. <small>[T1, 2p]</small>
 *Waarom hebben ontwikkelingsverschillen vaak te maken met koloniale geschiedenis?*
 
 Why are differences in development often linked to colonial history?
@@ -596,7 +596,7 @@ Other substantively correct answers based on the chapter content are also accept
 
 </details>
 
-## 15. [T2, 2p]
+## 15. <small>[T2, 2p]</small>
 *Leg uit waarom een economisch centrum kan verschuiven.*
 
 Explain why an economic centre can shift.
@@ -636,7 +636,7 @@ Other substantively correct answers based on the chapter content are also accept
 
 </details>
 
-## 16. [T2, 2p]
+## 16. <small>[T2, 2p]</small>
 *Wat is het grootste verschil tussen het handelsnetwerk van 1900 en vandaag de dag?*
 
 What is the main difference between the trade network of 1900 and today?
@@ -676,7 +676,7 @@ Other substantively correct answers based on the chapter content are also accept
 
 </details>
 
-## 17. [R, 2p]
+## 17. <small>[R, 2p]</small>
 *Wat is de ontwikkelingskloof?*
 
 What is the development gap?
@@ -716,7 +716,7 @@ Other substantively correct answers based on the chapter content are also accept
 
 </details>
 
-## 18. [R, 2p]
+## 18. <small>[R, 2p]</small>
 *Welke rol speelde Europa vroeger in de wereldhandel?*
 
 What role did Europe play in world trade in the past?
@@ -756,7 +756,7 @@ Other substantively correct answers based on the chapter content are also accept
 
 </details>
 
-## 19. [R, 2p]
+## 19. <small>[R, 2p]</small>
 *Waarom is Nederland een belangrijk land voor de wereldhandel?*
 
 Why is the Netherlands an important country for world trade?
@@ -796,7 +796,7 @@ Other substantively correct answers based on the chapter content are also accept
 
 </details>
 
-## 20. [T1, 2p]
+## 20. <small>[T1, 2p]</small>
 *Leg uit waarom Rotterdam een belangrijke handelsplaats is.*
 
 Explain why Rotterdam is an important trading place.
@@ -836,7 +836,7 @@ Other substantively correct answers based on the chapter content are also accept
 
 </details>
 
-## 21. [T1, 2p]
+## 21. <small>[T1, 2p]</small>
 *Noem twee dingen die de wereldhandel hebben vergroot sinds 1980.*
 
 Name two things that have increased world trade since 1980.

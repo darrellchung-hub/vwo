@@ -36,7 +36,7 @@ For extended explanations: answer directly first. Explain your reasoning step by
 
 ---
 
-## 1. [R, 2p]
+## 1. <small>[R, 2p]</small>
 *Noem het verschil tussen een kernland en een semiperiferieland in één zin.*
 
 State the difference between a core country and a semi-peripheral country in one sentence.
@@ -76,7 +76,7 @@ Other substantively correct answers based on the chapter content are also accept
 
 </details>
 
-## 2. [T1, 3p]
+## 2. <small>[T1, 3p]</small>
 *Leg uit hoe offshoring, de container en ICT samen hebben bijgedragen aan de groei van de wereldhandel.*
 
 Explain how offshoring, the container and ICT together contributed to the growth of world trade.
@@ -118,7 +118,7 @@ Other substantively correct answers based on the chapter content are also accept
 
 </details>
 
-## 3. [T1, 3p]
+## 3. <small>[T1, 3p]</small>
 *Waarom is China in de afgelopen decennia een belangrijker speler in de wereldhandel geworden? Geef drie redenen.*
 
 Why has China become a more important player in world trade in recent decades? Give three reasons.
@@ -160,7 +160,7 @@ Other substantively correct answers based on the chapter content are also accept
 
 </details>
 
-## 4. [T2, 3p]
+## 4. <small>[T2, 3p]</small>
 *Vergelijk het economische wereldbeeld van 1900 met dat van nu. Noem twee kernverschillen.*
 
 Compare the economic world view of 1900 with that of today. Name two key differences.
@@ -202,7 +202,7 @@ Other substantively correct answers based on the chapter content are also accept
 
 </details>
 
-## 5. [T2, 3p]
+## 5. <small>[T2, 3p]</small>
 *Leg uit hoe een product, zoals een game console of een T-shirt, via verschillende landen kan reizen voordat het bij de consument is.*
 
 Explain how a product such as a games console or T-shirt can travel through several countries before reaching the consumer.
@@ -244,7 +244,7 @@ Other substantively correct answers based on the chapter content are also accept
 
 </details>
 
-## 6. [I, 3p]
+## 6. <small>[I, 3p]</small>
 *Is globalisatie altijd positief? Geef twee argumenten voor en tegen.*
 
 Is globalisation always positive? Give two arguments for and against.
@@ -286,7 +286,7 @@ Other substantively correct answers based on the chapter content are also accept
 
 </details>
 
-## 7. [R, 2p]
+## 7. <small>[R, 2p]</small>
 *Wat is een multipolaire wereldeconomie?*
 
 What is a multipolar world economy?
@@ -326,7 +326,7 @@ Other substantively correct answers based on the chapter content are also accept
 
 </details>
 
-## 8. [T1, 3p]
+## 8. <small>[T1, 3p]</small>
 *Noem twee oorzaken van de ontwikkelingskloof en leg uit hoe die elkaar kunnen versterken.*
 
 Name two causes of the development gap and explain how they can reinforce each other.
@@ -368,7 +368,7 @@ Other substantively correct answers based on the chapter content are also accept
 
 </details>
 
-## 9. [T2, 3p]
+## 9. <small>[T2, 3p]</small>
 *Waarom kunnen kernlanden ondanks de groei van semiperiferielanden nog steeds een grote invloed houden op de wereldhandel?*
 
 Why can core countries still exert a major influence on world trade despite the growth of semi-peripheral countries?
@@ -410,7 +410,7 @@ Other substantively correct answers based on the chapter content are also accept
 
 </details>
 
-## 10. [T1, 2p]
+## 10. <small>[T1, 2p]</small>
 *Hoe heeft kolonialisme de handelsstructuur in veel landen beïnvloed?*
 
 How did colonialism affect the trade structure in many countries?
@@ -450,7 +450,7 @@ Other substantively correct answers based on the chapter content are also accept
 
 </details>
 
-## 11. [T2, 3p]
+## 11. <small>[T2, 3p]</small>
 *Leg uit waarom Europa nog steeds een belangrijke rol speelt in de handel, ondanks de verschuiving van de economische zwaartekracht.*
 
 Explain why Europe still plays an important role in trade despite the shift in economic gravity.
@@ -492,7 +492,7 @@ Other substantively correct answers based on the chapter content are also accept
 
 </details>
 
-## 12. [T2, 3p]
+## 12. <small>[T2, 3p]</small>
 *Waarom is Nederland een belangrijk knooppunt in de internationale handel? Gebruik ten minste twee verschillende redenen.*
 
 Why is the Netherlands an important hub in international trade? Use at least two different reasons.
@@ -534,7 +534,7 @@ Other substantively correct answers based on the chapter content are also accept
 
 </details>
 
-## 13. [I, 3p]
+## 13. <small>[I, 3p]</small>
 *Moet een land zichzelf beschermen tegen buitenlandse concurrentie? Geef twee argumenten voor een antwoord.*
 
 Should a country protect itself against foreign competition? Give two arguments for your answer.
@@ -576,7 +576,7 @@ Other substantively correct answers based on the chapter content are also accept
 
 </details>
 
-## 14. [I, 3p]
+## 14. <small>[I, 3p]</small>
 *Bespreek in een korte argumentatie of vrije handel of protectionisme voor Nederland het beste is.*
 
 Discuss in a short argument whether free trade or protectionism is best for the Netherlands.
@@ -618,7 +618,7 @@ Other substantively correct answers based on the chapter content are also accept
 
 </details>
 
-## 15. [T1, 3p]
+## 15. <small>[T1, 3p]</small>
 *Maak een oorzaak-gevolgketen: container + ICT + vrije handel → verandering van de wereldhandel.*
 
 Create a cause-and-effect chain: container + ICT + free trade → change in world trade.
@@ -660,7 +660,7 @@ Other substantively correct answers based on the chapter content are also accept
 
 </details>
 
-## 16. [T2, 3p]
+## 16. <small>[T2, 3p]</small>
 *Leg uit waarom een land soms kiest voor reshoring en waarom dat tegenstrijdig kan zijn met globale handel.*
 
 Explain why a country might choose reshoring and why this can conflict with global trade.

@@ -41,7 +41,7 @@ Keep all other content in ordinary Markdown so it remains readable in GitHub, VS
 2. Put book, paragraphs, duration, and total points in one compact metadata table.
 3. Put student name and date together on one compact line in each language block.
 4. Put bilingual instructions before question 1.
-5. Use one H2 per numbered question. Include its RTTI label and points in the heading, for example `## 1. [T1, 2p]`.
+5. Use one H2 per numbered question. Keep the question number as the heading, but wrap its RTTI label and points in `<small>` so they remain available without dominating the question, for example `## 1. <small>[T1, 2p]</small>`.
 6. End with the bilingual grading formula, grade table, and a short paragraph revision guide.
 
 ## Bilingual question layout

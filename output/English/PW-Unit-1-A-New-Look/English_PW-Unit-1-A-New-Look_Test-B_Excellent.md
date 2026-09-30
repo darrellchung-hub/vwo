@@ -14,7 +14,7 @@ Instructions: Answer all questions. In grammar, pay attention to the difference 
 
 Tip: give a direct answer first, then support it with words or sentences from the text.
 
-## 1. [T2, 4p]
+## 1. <small>[T2, 4p]</small>
 
 Read the text.
 
@@ -41,7 +41,7 @@ Model answer: Ava cares about practical, comfortable clothing and does not want 
 
 </details>
 
-## 2. [T2, 3p]
+## 2. <small>[T2, 3p]</small>
 
 Which conclusion about Ava is best supported? Choose an option and prove your choice with two details from the text.
 
@@ -65,7 +65,7 @@ Model answer: B. Ava is thoughtful and practical because she cares about practic
 
 </details>
 
-## 3. [T2, 3p]
+## 3. <small>[T2, 3p]</small>
 
 Explain why the writer uses both "has already written" and "has been practising". Describe the difference in emphasis.
 
@@ -84,7 +84,7 @@ Model answer: "Has already written" is Present Perfect Simple and focuses on the
 
 </details>
 
-## 4. [T2, 3p]
+## 4. <small>[T2, 3p]</small>
 
 Fill in the correct form. Use Present Simple, Present Continuous, Present Perfect Simple, or Present Perfect Continuous.
 
@@ -103,7 +103,7 @@ Model answer: chooses; is working; has been thinking; has already written.
 
 </details>
 
-## 5. [T2, 3p]
+## 5. <small>[T2, 3p]</small>
 
 Fill in the correct forms and explain in English why two verbs are not used with -ing.
 
@@ -124,7 +124,7 @@ Model answer: know; believe; needs; is looking; is thinking. Know, believe, and 
 
 </details>
 
-## 6. [T2, 2p]
+## 6. <small>[T2, 2p]</small>
 
 Fill in for or since. Note that one sentence uses a state rather than an activity.
 
@@ -143,7 +143,7 @@ Model answer: since; for; since.
 
 </details>
 
-## 7. [T2, 3p]
+## 7. <small>[T2, 3p]</small>
 
 Correct the text. There are three errors.
 
@@ -164,7 +164,7 @@ Model answer: I have known my partner for five years. We have been planning the 
 
 </details>
 
-## 8. [T2, 4p]
+## 8. <small>[T2, 4p]</small>
 
 Fill in the correct word form. Use a noun, verb, adjective, or adverb as required by the sentence.
 
@@ -183,7 +183,7 @@ Model answer: achievable; hopeless; education; successfully.
 
 </details>
 
-## 9. [T2, 3p]
+## 9. <small>[T2, 3p]</small>
 
 A student writes: "Leo has been wearing a plain waistcoat, so he is out of fashion." Do you agree? Give two arguments from the unit and use at least two words from 1.1.
 
@@ -202,7 +202,7 @@ Model answer: Either position can earn full credit. You may agree because he is 
 
 </details>
 
-## 10. [T2, 3p]
+## 10. <small>[T2, 3p]</small>
 
 Write three English sentences describing a photo: one sentence about the foreground or background, one about clothing, and one sentence that speculates with might or could.
 
@@ -223,7 +223,7 @@ Model answer: In the foreground, I can see a girl with curly hair. She is wearin
 
 </details>
 
-## 11. [T2, 2p]
+## 11. <small>[T2, 2p]</small>
 
 Fill in the correct form. Choose between Present Perfect Simple and Present Perfect Continuous.
 
@@ -242,7 +242,7 @@ Model answer: have been revising; have learnt/learned.
 
 </details>
 
-## 12. [I, 2p]
+## 12. <small>[I, 2p]</small>
 
 Explain why "I am having lunch" can be correct, but "I am having a car" does not fit the meaning in the unit.
 
@@ -261,7 +261,7 @@ Model answer: In "I am having lunch", have describes an activity, so it can be d
 
 </details>
 
-## 13. [I, 3p]
+## 13. <small>[I, 3p]</small>
 
 Write a short personal email of three to four English sentences about someone you know. Describe appearance, clothes, and personality. Use at least one Present Perfect sentence and one word from the suffix list.
 
@@ -282,7 +282,7 @@ Model answer: My friend Sam is tall and has straight dark hair. He usually wears
 
 </details>
 
-## 14. [I, 2p]
+## 14. <small>[I, 2p]</small>
 
 Complete the sentence with a logical conclusion and use come across as: "Although she is nervous, she comes across as ... because ..."
 

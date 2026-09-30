@@ -12,7 +12,7 @@
 
 Instructions: Answer all questions. In grammar questions, fill in the correct form.
 
-## 1. [R, 2p]
+## 1. <small>[R, 2p]</small>
 
 Fill in the correct clothing word: She is wearing a warm ______ over her blouse.
 
@@ -29,7 +29,7 @@ Model answer: coat.
 
 </details>
 
-## 2. [R, 2p]
+## 2. <small>[R, 2p]</small>
 
 Match each word to the correct meaning: 1. reliable  2. vain  3. rebellious
 
@@ -50,7 +50,7 @@ Model answer: 1-C, 2-B, 3-A.
 
 </details>
 
-## 3. [T1, 2p]
+## 3. <small>[T1, 2p]</small>
 
 Describe in English someone who is neither tall nor short. Use the words from the unit.
 
@@ -67,7 +67,7 @@ Model answer: He/She is medium height.
 
 </details>
 
-## 4. [T1, 2p]
+## 4. <small>[T1, 2p]</small>
 
 Choose the best option: Maya chooses old but fashionable clothes. Her style is ______.
 
@@ -89,7 +89,7 @@ Model answer: A. vintage.
 
 </details>
 
-## 5. [T1, 2p]
+## 5. <small>[T1, 2p]</small>
 
 Translate the complete sentence: He comes across as easy-going and reliable.
 
@@ -106,7 +106,7 @@ Model answer: He seems easy-going and reliable.
 
 </details>
 
-## 6. [R, 2p]
+## 6. <small>[R, 2p]</small>
 
 Write D (dynamic) or S (state): know, work, believe, study.
 
@@ -123,7 +123,7 @@ Model answer: know = S; work = D; believe = S; study = D.
 
 </details>
 
-## 7. [T1, 2p]
+## 7. <small>[T1, 2p]</small>
 
 Fill in the correct form: I usually ______ (work) in a shop, but today I ______ (work) at a fashion festival.
 
@@ -140,7 +140,7 @@ Model answer: work; am working.
 
 </details>
 
-## 8. [T1, 2p]
+## 8. <small>[T1, 2p]</small>
 
 Correct the sentence: I am believing you.
 
@@ -157,7 +157,7 @@ Model answer: I believe you.
 
 </details>
 
-## 9. [T1, 2p]
+## 9. <small>[T1, 2p]</small>
 
 Choose the correct form: I ______ (think) about buying a leather belt right now.
 
@@ -174,7 +174,7 @@ Model answer: am thinking.
 
 </details>
 
-## 10. [T1, 2p]
+## 10. <small>[T1, 2p]</small>
 
 Fill in the correct form: You ______ (look) tired, but I ______ (look) at the photo.
 
@@ -191,7 +191,7 @@ Model answer: look; am looking.
 
 </details>
 
-## 11. [R, 2p]
+## 11. <small>[R, 2p]</small>
 
 Fill in with for or since: She has been studying ______ 8 o'clock and I have been waiting ______ two hours.
 
@@ -208,7 +208,7 @@ Model answer: since; for.
 
 </details>
 
-## 12. [T1, 2p]
+## 12. <small>[T1, 2p]</small>
 
 Fill in the Present Perfect Continuous: They ______ ______ ______ (wear) similar clothes all day.
 
@@ -225,7 +225,7 @@ Model answer: have been wearing.
 
 </details>
 
-## 13. [T1, 2p]
+## 13. <small>[T1, 2p]</small>
 
 Fill in the Present Perfect Simple: She ______ ______ (visit) the fashion museum three times.
 
@@ -242,7 +242,7 @@ Model answer: has visited.
 
 </details>
 
-## 14. [T1, 2p]
+## 14. <small>[T1, 2p]</small>
 
 Choose the best form: I ______ three emails this morning. (have written / have been writing)
 
@@ -259,7 +259,7 @@ Model answer: have written, because the result is three completed emails.
 
 </details>
 
-## 15. [T1, 2p]
+## 15. <small>[T1, 2p]</small>
 
 Correct the sentence: I have been knowing her for five years.
 
@@ -276,7 +276,7 @@ Model answer: I have known her for five years.
 
 </details>
 
-## 16. [R, 2p]
+## 16. <small>[R, 2p]</small>
 
 Make an adjective and a noun from achieve: achievable and ______.
 
@@ -293,7 +293,7 @@ Model answer: achievement.
 
 </details>
 
-## 17. [T1, 2p]
+## 17. <small>[T1, 2p]</small>
 
 Fill in the correct word forms: Her successful ______ (educate) made her a ______ (success) fashion editor.
 
@@ -310,7 +310,7 @@ Model answer: education; successful.
 
 </details>
 
-## 18. [T2, 2p]
+## 18. <small>[T2, 2p]</small>
 
 Read the text and answer the question.
 
@@ -333,7 +333,7 @@ Model answer: She has chosen, for example, a practical rain jacket and faded jea
 
 </details>
 
-## 19. [T1, 2p]
+## 19. <small>[T1, 2p]</small>
 
 Write two English sentences about a person: one sentence about appearance or clothing and one sentence about personality.
 
@@ -352,7 +352,7 @@ Model answer: My cousin is medium height and has straight hair. She is hard-work
 
 </details>
 
-## 20. [T1, 2p]
+## 20. <small>[T1, 2p]</small>
 
 Complete the sentence with suitable expressions: In the photo, the girl is ______ the left and she ______ be the centre of attention.
 

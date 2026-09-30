@@ -2,9 +2,9 @@
 
 **[Subject] – [Chapter] – Test [A/B] – [Level]**
 
-> *Sjabloonlegenda (verwijder uit de uiteindelijke toets): In `## 1. [T1, 2p]` is `1.` het vraagnummer, `T1` het RTTI-label en `2p` het aantal punten. Kies per vraag één label: `R` = kennis reproduceren; `T1` = bekende kennis toepassen; `T2` = kennis toepassen in een nieuwe situatie; `I` = verbanden uitleggen of beargumenteren. Vervang `Xp` door het echte aantal punten.*
+> *Sjabloonlegenda (verwijder uit de uiteindelijke toets): In `## 1. <small>[T1, 2p]</small>` is `1.` het vraagnummer, `T1` het RTTI-label en `2p` het aantal punten. Kies per vraag één label: `R` = kennis reproduceren; `T1` = bekende kennis toepassen; `T2` = kennis toepassen in een nieuwe situatie; `I` = verbanden uitleggen of beargumenteren. Vervang `Xp` door het echte aantal punten.*
 >
-> Template legend (remove from the finished test): In `## 1. [T1, 2p]`, `1.` is the question number, `T1` is the RTTI label, and `2p` is the number of points. Choose one label per question: `R` = recall; `T1` = apply a familiar method; `T2` = apply knowledge in a new situation; `I` = explain connections or justify. Replace `Xp` with the actual number of points.
+> Template legend (remove from the finished test): In `## 1. <small>[T1, 2p]</small>`, `1.` is the question number, `T1` is the RTTI label, and `2p` is the number of points. Choose one label per question: `R` = recall; `T1` = apply a familiar method; `T2` = apply knowledge in a new situation; `I` = explain connections or justify. Replace `Xp` with the actual number of points.
 
 | Gegevens | Invullen |
 |---|---|
@@ -40,7 +40,7 @@ Start with a direct answer. Then explain your reasoning step by step, for exampl
 
 ---
 
-## 1. [R/T1/T2/I, Xp]
+## 1. <small>[R/T1/T2/I, Xp]</small>
 
 *[Vraag in natuurlijk Nederlands.]*
 
@@ -81,7 +81,7 @@ ____________________________________________________________________________
 
 </details>
 
-## 2. [R/T1/T2/I, Xp]
+## 2. <small>[R/T1/T2/I, Xp]</small>
 
 *[Volgende vraag in natuurlijk Nederlands.]*
 
