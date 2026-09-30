@@ -77,7 +77,11 @@ For every question, including instructions, answer options and data tables:
 
 Each test keeps its answers in the same Markdown file, hidden in a collapsed `<details>` block immediately underneath the question.
 - Put the question, then the bilingual answer in a collapsed `<details>` section directly below it; never group answers at the end.
-- Show the model answer bilingually, with a points breakdown ("1p for …, 1p for …") directly below that question's answer.
+- For any calculation, construction, multi-step application, or explanation, give a worked solution the student can follow: show the chosen method, each meaningful intermediate step, the calculation or evidence used, and a check or interpretation where relevant. Do not give only the final result.
+- Present worked reasoning in numbered, bilingual steps: Dutch first in italics, then the equivalent English step in its own paragraph. Keep the step order and mathematical values identical across languages.
+- State a clearly labelled final answer after the working. Include units, simplified form, and a sentence answering the question when needed.
+- For simple recall, naming, or definition questions that need no procedure, keep the response concise; add a distinguishing detail or short explanation when it helps the student understand or avoid a common confusion. Do not invent artificial steps.
+- Put the points breakdown directly below the solution and map points to the demonstrated steps or required ideas (for example, 1p for setting up the common denominator, 1p for the correct subtraction, 1p for simplifying).
 - Include acceptable alternatives for open questions.
 - Add the paragraph each question comes from (e.g. "§1.2"), so gaps can be traced back to the book.
 - End the file with the grade formula and a points-to-grade table, plus a short "If you scored low on … revisit §…" guide.
@@ -100,6 +104,7 @@ Save the finished files to `./output/<subject>/<topic>/`. Do not write outside t
 - Dutch and English say the same thing.
 - The hidden answer blocks match the question numbering.
 - In each question section, the bilingual answer, points breakdown, acceptable alternatives, and source paragraph appear immediately below that question; no answer-only block is appended at the end.
+- Worked solutions show enough intermediate reasoning for the student to reproduce the method; point allocations correspond to the visible steps, and Dutch/English steps agree.
 - Confirm the Markdown renders correctly, including tables, headings, bilingual text, answer lines, and answer-key numbering.
 
 Finish with a short message: which paragraphs are covered, the number of questions and points per test, and where the files are.

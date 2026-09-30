@@ -23,6 +23,17 @@ function encodePath(value) {
   return value.split('/').map(encodeURIComponent).join('/');
 }
 
+function rewriteMarkdownLinksToHtml(content) {
+  return content.replace(/(<a\b[^>]*\bhref=")([^"]+)(")/gi, (anchor, prefix, href, suffix) => {
+    if (/^(?:[a-z][a-z\d+.-]*:|\/\/|#)/i.test(href)) return anchor;
+    const suffixIndex = href.search(/[?#]/);
+    const pathname = suffixIndex < 0 ? href : href.slice(0, suffixIndex);
+    const queryAndHash = suffixIndex < 0 ? '' : href.slice(suffixIndex);
+    if (!/\.md$/i.test(pathname)) return anchor;
+    return `${prefix}${pathname.replace(/\.md$/i, '.html')}${queryAndHash}${suffix}`;
+  });
+}
+
 async function findMarkdownFiles(directory, relativeDirectory = '') {
   const entries = await readdir(directory, { withFileTypes: true });
   const found = [];
@@ -57,10 +68,199 @@ function pageTemplate({ title, stylesheet, content, breadcrumb }) {
       <span class="site-context">3 vwo · Practice library</span>
     </header>
     <main class="document">
-      <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="${breadcrumb.home}">All tests</a><span aria-hidden="true">/</span><span>${escapeHtml(breadcrumb.topic)}</span></nav>
+      <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="${breadcrumb.home}">${escapeHtml(breadcrumb.homeLabel)}</a><span aria-hidden="true">/</span><span>${escapeHtml(breadcrumb.topic)}</span></nav>
+      <div class="language-switch" role="group" aria-label="Language view / Taalweergave" hidden>
+        <span class="language-switch-label">Show / Toon</span>
+        <button type="button" data-language-mode="nl" aria-pressed="false">Nederlands</button>
+        <button type="button" data-language-mode="en" aria-pressed="false">English</button>
+        <button type="button" data-language-mode="all" aria-pressed="true">Both / Beide</button>
+      </div>
       <article class="markdown-body">${content}</article>
-      <p class="back-link"><a href="${breadcrumb.home}">Back to all tests</a></p>
+      <p class="back-link"><a href="${breadcrumb.home}">Back to ${escapeHtml(breadcrumb.homeLabel)}</a></p>
     </main>
+    <script>
+      (() => {
+        const article = document.querySelector('.markdown-body');
+        const control = document.querySelector('.language-switch');
+        if (!article || !control) return;
+
+        const markLanguage = (element, language) => {
+          element.dataset.language = language;
+          element.lang = language;
+        };
+        const isDutchParagraph = (paragraph) => {
+          const content = [...paragraph.childNodes].filter((node) => node.nodeType !== Node.TEXT_NODE || node.textContent.trim());
+          return content.length === 1 && content[0].nodeType === Node.ELEMENT_NODE && content[0].tagName === 'EM';
+        };
+
+        for (const heading of article.querySelectorAll('h1, h3')) {
+          const translation = heading.nextElementSibling;
+          if (translation && translation.tagName === 'P' && isDutchParagraph(translation)) {
+            markLanguage(heading, 'nl');
+            markLanguage(translation, 'en');
+          }
+        }
+        const headingLanguages = new Map([
+          ['doorlopende onderdelen', 'nl'],
+          ['bronnen', 'nl'],
+          ['pacing and alignment notes', 'en'],
+        ]);
+        for (const heading of article.querySelectorAll('h2')) {
+          const translation = heading.nextElementSibling;
+          if (!translation || translation.tagName !== 'P' || !isDutchParagraph(translation)) continue;
+          const language = headingLanguages.get(heading.textContent.trim().toLowerCase());
+          if (!language) continue;
+          markLanguage(heading, language);
+          markLanguage(translation, language === 'nl' ? 'en' : 'nl');
+        }
+
+        const paragraphs = [...article.querySelectorAll('p')];
+        for (const paragraph of paragraphs) {
+          if (!isDutchParagraph(paragraph) || paragraph.dataset.language) continue;
+          let translation = paragraph.nextElementSibling;
+          if ((!translation || translation.tagName !== 'P') && paragraph.parentElement.tagName === 'LI') {
+            const list = paragraph.parentElement.parentElement;
+            const isLastListItem = paragraph.parentElement === list.lastElementChild;
+            translation = isLastListItem && list.nextElementSibling && list.nextElementSibling.tagName === 'P'
+              ? list.nextElementSibling
+              : null;
+          }
+          if (!translation || translation.tagName !== 'P' || isDutchParagraph(translation)) continue;
+          markLanguage(paragraph, 'nl');
+          markLanguage(translation, 'en');
+        }
+
+        for (const item of article.querySelectorAll('li')) {
+          const breaks = [...item.childNodes].filter((node) => node.nodeType === Node.ELEMENT_NODE && node.tagName === 'BR');
+          if (breaks.length !== 1 || item.querySelector('[data-language]')) continue;
+          const lineBreak = breaks[0];
+          const dutchNodes = [];
+          const englishNodes = [];
+          let afterBreak = false;
+          for (const node of [...item.childNodes]) {
+            if (node === lineBreak) {
+              afterBreak = true;
+              continue;
+            }
+            (afterBreak ? englishNodes : dutchNodes).push(node);
+          }
+          const dutchHasEmphasis = dutchNodes.some((node) => node.nodeType === Node.ELEMENT_NODE && (node.tagName === 'EM' || node.querySelector('em')));
+          const englishHasEmphasis = englishNodes.some((node) => node.nodeType === Node.ELEMENT_NODE && (node.tagName === 'EM' || node.querySelector('em')));
+          if (!dutchHasEmphasis || !englishHasEmphasis) continue;
+          const dutchBlock = document.createElement('span');
+          dutchBlock.dataset.language = 'nl';
+          dutchBlock.lang = 'nl';
+          dutchNodes.forEach((node) => dutchBlock.append(node));
+          const englishBlock = document.createElement('span');
+          englishBlock.dataset.language = 'en';
+          englishBlock.lang = 'en';
+          englishNodes.forEach((node) => englishBlock.append(node));
+          const separator = document.createElement('br');
+          separator.dataset.language = 'all';
+          item.replaceChildren(dutchBlock, separator, englishBlock);
+        }
+
+        const paragraphLabels = [
+          ['bron:', 'nl'], ['modelantwoord:', 'nl'], ['punten:', 'nl'],
+          ['andere goede antwoorden:', 'nl'], ['instructies:', 'nl'], ['tip bij uitlegvragen:', 'nl'],
+          ['source:', 'en'], ['model answer:', 'en'], ['points:', 'en'],
+          ['other acceptable answers:', 'en'], ['instructions:', 'en'], ['tip for explanation questions:', 'en'],
+        ];
+        for (const paragraph of article.querySelectorAll('p')) {
+          const label = paragraph.firstElementChild;
+          if (!label || label.tagName !== 'STRONG') continue;
+          const text = label.textContent.trim().toLowerCase();
+          const match = paragraphLabels.find(([prefix]) => text.startsWith(prefix));
+          if (match) markLanguage(paragraph, match[1]);
+        }
+
+        const tables = [...article.querySelectorAll('table')];
+        const hasLabel = (table, labels) => {
+          const text = table.textContent.toLowerCase();
+          return labels.some((label) => text.includes(label));
+        };
+        const sameTableShape = (first, second) => {
+          const firstRows = [...first.rows];
+          const secondRows = [...second.rows];
+          return firstRows.length === secondRows.length && firstRows.every((row, index) => row.cells.length === secondRows[index].cells.length);
+        };
+        const dutchTableLabels = ['vak', 'boek', 'hoofdstuk', 'totaal', 'tijd', 'naam', 'veld', 'gegeven', 'punten', 'cijfer', 'herhalen'];
+        const englishTableLabels = ['subject', 'book', 'chapter', 'total', 'time', 'name', 'field', 'details', 'points', 'grade', 'review'];
+        for (let index = 0; index < tables.length - 1; index += 1) {
+          const dutchTable = tables[index];
+          const englishTable = tables[index + 1];
+          if (dutchTable.nextElementSibling !== englishTable || !sameTableShape(dutchTable, englishTable)) continue;
+          if (hasLabel(dutchTable, dutchTableLabels) && hasLabel(englishTable, englishTableLabels)) {
+            markLanguage(dutchTable, 'nl');
+            markLanguage(englishTable, 'en');
+            index += 1;
+          }
+        }
+
+        const sectionLanguages = new Map([['beoordeling', 'nl'], ['grading', 'en']]);
+        for (const heading of article.querySelectorAll('h2')) {
+          const language = sectionLanguages.get(heading.textContent.trim().toLowerCase());
+          if (!language) continue;
+          markLanguage(heading, language);
+          let sibling = heading.nextElementSibling;
+          while (sibling && !/^H[1-6]$/.test(sibling.tagName)) {
+            markLanguage(sibling, language);
+            sibling = sibling.nextElementSibling;
+          }
+        }
+
+        for (const summary of article.querySelectorAll('details > summary')) {
+          const dutch = summary.querySelector('em');
+          const lineBreak = dutch ? dutch.nextElementSibling : null;
+          const englishText = lineBreak ? lineBreak.nextSibling : null;
+          if (!dutch || !lineBreak || lineBreak.tagName !== 'BR' || !englishText || englishText.nodeType !== Node.TEXT_NODE || !englishText.textContent.trim()) continue;
+          markLanguage(dutch, 'nl');
+          const english = document.createElement('span');
+          english.textContent = englishText.textContent.trim();
+          markLanguage(english, 'en');
+          englishText.replaceWith(english);
+        }
+
+        for (const cell of article.querySelectorAll('th, td')) {
+          if (cell.children.length || cell.childNodes.length !== 1 || cell.firstChild.nodeType !== Node.TEXT_NODE) continue;
+          const value = cell.textContent.trim();
+          const separatorIndex = value.indexOf(' / ');
+          if (separatorIndex < 0) continue;
+          const dutchText = value.slice(0, separatorIndex).trim();
+          const englishText = value.slice(separatorIndex + 3).trim();
+          if (!/[A-Za-zÀ-ÿ]/.test(dutchText) || !/[A-Za-zÀ-ÿ]/.test(englishText)) continue;
+          const dutch = document.createElement('span');
+          dutch.textContent = dutchText.trim();
+          markLanguage(dutch, 'nl');
+          const separator = document.createElement('span');
+          separator.textContent = ' / ';
+          separator.dataset.language = 'all';
+          const english = document.createElement('span');
+          english.textContent = englishText.trim();
+          markLanguage(english, 'en');
+          cell.replaceChildren(dutch, separator, english);
+        }
+
+        const hasDutch = article.querySelector('[data-language="nl"]');
+        const hasEnglish = article.querySelector('[data-language="en"]');
+        if (!hasDutch || !hasEnglish) return;
+
+        control.hidden = false;
+        const buttons = [...control.querySelectorAll('[data-language-mode]')];
+        const setMode = (mode) => {
+          document.documentElement.dataset.languageMode = mode;
+          for (const button of buttons) button.setAttribute('aria-pressed', String(button.dataset.languageMode === mode));
+          try { localStorage.setItem('study-language-mode', mode); } catch {}
+        };
+        let initialMode = 'all';
+        try {
+          const savedMode = localStorage.getItem('study-language-mode');
+          if (['nl', 'en', 'all'].includes(savedMode)) initialMode = savedMode;
+        } catch {}
+        for (const button of buttons) button.addEventListener('click', () => setMode(button.dataset.languageMode));
+        setMode(initialMode);
+      })();
+    </script>
   </body>
 </html>
 `;
@@ -80,7 +280,12 @@ for (const file of files) {
   const relativeHtmlPath = file.relativePath.replace(/\.md$/i, '.html');
   const targetPath = path.join(siteRoot, ...relativeHtmlPath.split('/'));
   const stylesheet = encodePath(path.posix.relative(path.posix.dirname(relativeHtmlPath), 'assets/site.css'));
-  const home = encodePath(path.posix.relative(path.posix.dirname(relativeHtmlPath), 'index.html'));
+  const defaultHome = encodePath(path.posix.relative(path.posix.dirname(relativeHtmlPath), 'index.html'));
+  const isEllaVwo1 = file.relativePath.startsWith('Wiskunde/VWO-1/');
+  const home = isEllaVwo1
+    ? encodePath(path.posix.relative(path.posix.dirname(relativeHtmlPath), 'ella/index.html'))
+    : defaultHome;
+  const homeLabel = isEllaVwo1 ? "Ella's VWO 1" : 'All tests';
   const heading = source.match(/^#\s+(.+)$/m)?.[1]?.trim() ?? path.basename(file.relativePath, path.extname(file.relativePath)).replaceAll('_', ' ');
   const pathParts = file.relativePath.split('/');
   const subject = pathParts[0] ?? 'Other';
@@ -90,8 +295,8 @@ for (const file of files) {
   await writeFile(targetPath, pageTemplate({
     title: heading,
     stylesheet,
-    content: await marked.parse(source),
-    breadcrumb: { home, topic },
+    content: rewriteMarkdownLinksToHtml(await marked.parse(source)),
+    breadcrumb: { home, homeLabel, topic },
   }));
 
   if (!groups.has(subject)) groups.set(subject, []);

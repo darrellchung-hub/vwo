@@ -62,10 +62,11 @@ For tests with extended explanation questions, include a brief bilingual student
 Place one collapsed `<details>` block directly after each question's answer space. Keep its bilingual summary visually separated across two lines, for example `<summary><em>Antwoord tonen</em><br>Show answer</summary>`. Inside, use this order:
 
 1. Source paragraph(s).
-2. Bilingual model answer: Dutch in italics, then English in a separate paragraph.
-3. Bilingual points breakdown and acceptable alternatives where relevant.
+2. For calculations, multi-step applications, constructions, and explanations, a worked solution in numbered steps. Put each Dutch step in italics, followed by its English equivalent in a separate paragraph. Keep values and step order aligned.
+3. A clearly labelled bilingual final answer, including units and interpretation where relevant. Simple recall answers may be concise; do not manufacture steps that do not exist.
+4. Bilingual points breakdown that awards credit for the demonstrated reasoning steps, plus acceptable alternatives where relevant.
 
-Do not repeat the question inside the collapsed block. Do not put answers in a separate file or collect them at the end.
+Do not repeat the question inside the collapsed block. Do not give only the final result when a method is being tested. Do not put answers in a separate file or collect them at the end.
 
 ## Tables and print readability
 
@@ -78,3 +79,11 @@ Do not repeat the question inside the collapsed block. Do not put answers in a s
 ## Optional custom styling
 
 If a user wants colors, fonts, or precise page layout, explain that these are renderer-specific. A Markdown renderer such as VS Code can load a custom CSS file through its Markdown styling settings, but the styles are not embedded in the `.md` file and will not travel reliably to GitHub or other viewers. Prefer a separate stylesheet only when the user names the target renderer; do not add inline CSS to ordinary test files by default.
+
+## Website language toggle
+
+Generated website document pages should provide an accessible three-mode language control: **Nederlands**, **English**, and **Both / Beide**. Show both languages by default. Persist the reader's selection across site pages in the browser, but do not change the Markdown source files or hide any content in print.
+
+Use the existing semantic convention to identify language blocks: Dutch text is italicized and appears before its English translation in the next paragraph. Also label known bilingual answer-key labels (such as `Bron / Source` and `Modelantwoord / Model answer`), answer-disclosure summaries, adjacent parallel metadata tables, and separate grading/source sections. Split `Dutch / English` text only in table cells when both sides contain words; never split arbitrary prose, URLs, fractions, or units. Only show the control when both languages are detected.
+
+The control must work with keyboard and assistive technology: use a labelled button group, expose the active mode with `aria-pressed`, keep a visible focus state, and hide inactive language content from both visual and accessibility trees. Keep the control compact and responsive; hide the control itself when printing and print both language versions.

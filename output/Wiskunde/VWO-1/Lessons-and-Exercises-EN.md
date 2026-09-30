@@ -3,7 +3,13 @@
 **Method:** Moderne Wiskunde, 14th edition, VWO 1, student books parts A and B  
 **Status:** Provisional, original study material. The Noordhoff tables of contents were used to determine the topics and order. The explanations and questions are newly written and have not been checked against the full textbook chapters or teacher objectives. Use them alongside the textbook; they do not replace the textbook or school lessons.
 
-The chapters follow part A 1–6 and part B 7–12. Each chapter has learning goals, a short explanation, a worked example, and three exercises. Answers are separate in [Answer-Key-EN.md](Answer-Key-EN.md). The Dutch version is in [Lessons-and-Exercises-NL.md](Lessons-and-Exercises-NL.md).
+The chapters follow part A 1–6 and part B 7–12. Each chapter has learning goals, a short explanation, a thinking strategy, a worked example, and three exercises. A general maths problem-solving routine appears at the start. Answers are separate in [Answer-Key-EN.md](Answer-Key-EN.md). The Dutch version is in [Lessons-and-Exercises-NL.md](Lessons-and-Exercises-NL.md).
+
+## A repeatable way to think through maths
+
+Read the question and restate what you need to find. Write down what you know and what is still unknown. Choose a useful representation, such as a sketch, number line, table, ratio table, tree diagram, or formula. Choose one first step and write each calculation on a new line. Finally, check that your answer fits the question, the units, and an estimate.
+
+If you get stuck, use smaller numbers or try a simpler example. Ask yourself: what do I already know, what is changing, and what drawing or table would make that visible? After a mistake, find the step that went wrong, repair it, and try a similar problem again later.
 
 ## Part A
 
@@ -15,6 +21,9 @@ The chapters follow part A 1–6 and part B 7–12. Each chapter has learning go
 
 **Core idea**  
 A 3D shape has faces, edges, and vertices. A net is a flat drawing that can be folded into a 3D shape. A front view, side view, and top view each show a different side. A line of sight describes what you can or cannot see from a particular position.
+
+**Thinking strategy**
+Sketch the shape and label its dimensions first. Keep front, side, and top views distinct. For a net, imagine folding along the edges; then check which faces are opposite and whether your count makes sense.
 
 **Worked example**  
 A rectangular prism is 5 cm long, 3 cm wide, and 2 cm high. It has 6 rectangular faces, 12 edges, and 8 vertices. The two 5-by-3 cm faces are opposite each other; the other pairs measure 5 by 2 cm and 3 by 2 cm.
@@ -32,6 +41,9 @@ A rectangular prism is 5 cm long, 3 cm wide, and 2 cm high. It has 6 rectangular
 
 **Core idea**  
 To add or subtract fractions, first make their denominators the same. To multiply fractions, multiply the numerators and multiply the denominators. A percentage is an amount out of 100: for example, 25% = 25/100 = 0.25.
+
+**Thinking strategy**
+Estimate roughly how large the answer should be before calculating. Decide which operation is needed. Fractions describe equal-sized parts of the same whole; with decimals, attend to place value. Convert a percentage, fraction, or decimal when another form makes the calculation clearer.
 
 **Worked example**  
 Calculate 3/4 + 2/3. A common denominator is 12: 3/4 = 9/12 and 2/3 = 8/12. Therefore, 3/4 + 2/3 = 17/12 = 1 5/12.
@@ -51,6 +63,9 @@ Calculate 3/4 + 2/3. A common denominator is 12: 3/4 = 9/12 and 2/3 = 8/12. Ther
 **Core idea**  
 A point (x, y) is located at x on the horizontal axis and y on the vertical axis. First read the scale on both axes. For ordered pairs, place the first value on the x-axis and its matching second value on the y-axis. A pattern is periodic if the same shape repeats after a fixed interval.
 
+**Thinking strategy**
+Read the labels and step size on both axes first. For (x, y), move horizontally and then vertically. For a formula, make a small table before plotting; use it to check whether the graph shows the expected pattern.
+
 **Worked example**  
 For the formula y = 2x + 1, when x = 0, y = 1; when x = 1, y = 3; and when x = 2, y = 5. The points are (0, 1), (1, 3), and (2, 5). Plot them on coordinate axes and draw a straight line through them.
 
@@ -69,6 +84,9 @@ For the formula y = 2x + 1, when x = 0, y = 1; when x = 1, y = 3; and when x = 2
 **Core idea**  
 A right angle is 90°. An acute angle is less than 90°, an obtuse angle is greater than 90° but less than 180°, and a straight angle is 180°. To measure an angle, place the centre of the protractor at the vertex and align its baseline with one arm of the angle.
 
+**Thinking strategy**
+Make a rough sketch and mark the given angles and sides. Decide whether angles form a right or straight angle before calculating. When measuring or constructing, use the protractor or compass carefully and check that the drawing meets every given condition.
+
 **Worked example**  
 An angle of 68° and an adjacent angle form a straight angle. A straight angle is 180°, so the unknown angle is 180° - 68° = 112°. It is an obtuse angle.
 
@@ -85,6 +103,9 @@ An angle of 68° and an adjacent angle form a straight angle. A straight angle i
 
 **Core idea**  
 In a ratio table, multiply or divide both rows by the same factor. To find p% of an amount, calculate p/100 of that amount. At a scale of 1 : n, one unit on the map represents n of the same units in real life.
+
+**Thinking strategy**
+Write down the two quantities you are comparing and include their units. In a ratio table, look for the same multiplying factor in both rows. For scale, first make sure map and real-life measurements use matching units; then scale back to check your answer.
 
 **Worked example**  
 On a map with scale 1 : 50,000, a route is 3 cm long. In real life, that is 3 x 50,000 = 150,000 cm. Since 100,000 cm = 1 km, the route is 1.5 km.
@@ -103,6 +124,9 @@ On a map with scale 1 : 50,000, a route is 3 cm long. In real life, that is 3 x 
 
 **Core idea**  
 A formula describes a relationship using letters for changing values. In y = 3x + 2, multiply x by 3 first, then add 2. A linear formula produces a straight-line graph. A table helps calculate the matching y-values for different x-values.
+
+**Thinking strategy**
+Give each letter a meaning. In a context, look for the starting amount and what is added per step. Test the formula with a few values in a table and see whether the points lie on the expected straight line. Compare formulas using the same x-value.
 
 **Worked example**  
 A bike rental charges a €4 starting fee and €2 per hour. Let h be the number of hours and K the cost: K = 4 + 2h. For 5 hours, K = 4 + 2 x 5 = €14.
@@ -124,6 +148,9 @@ A bike rental charges a €4 starting fee and €2 per hour. Let h be the number
 **Core idea**  
 On a number line, negative numbers are to the left of zero. Adding a positive number means moving right; adding a negative number means moving left. When multiplying or dividing, matching signs give a positive result and different signs give a negative result. A power is repeated multiplication, for example 2^3 = 2 x 2 x 2.
 
+**Thinking strategy**
+Use the number line to see direction and distance. Pay close attention to brackets in powers: a negative base in brackets is multiplied repeatedly. Check subtraction by adding back, and check the sign before continuing.
+
 **Worked example**  
 Calculate -7 + 12. Start at -7 and move 12 steps to the right. You reach 5, so -7 + 12 = 5.
 
@@ -141,6 +168,9 @@ Calculate -7 + 12. Start at -7 and move 12 steps to the right. You reach 5, so -
 
 **Core idea**  
 Like terms have the same variable raised to the same power: 3a and 2a can be combined to make 5a, but a and a^2 cannot. In an equation, find the value of the variable that makes the equality true. Keep the balance equal by doing the same operation on both sides.
+
+**Thinking strategy**
+Treat an equation like a balance: whatever you do to one side, do to the other. Take one step at a time and write the intermediate line. Substitute your solution into the original equation to check it.
 
 **Worked example**  
 Solve 2x + 3 = 15. Subtract 3 from both sides: 2x = 12. Divide both sides by 2: x = 6. Check: 2 x 6 + 3 = 15.
@@ -160,6 +190,9 @@ Solve 2x + 3 = 15. Subtract 3 from both sides: 2x = 12. Divide both sides by 2: 
 **Core idea**  
 Perimeter is the total length around a 2D shape. The area of a rectangle is length x width. The volume of a rectangular prism is length x width x height. Pay attention to units: area may be in cm² and volume in cm³. 1,000 cm³ equals 1 litre.
 
+**Thinking strategy**
+First ask whether you need the boundary, the covered surface, or the space inside. Sketch the shape and label the dimensions. Check whether the answer should use cm, cm², or cm³, and estimate whether its size is reasonable.
+
 **Worked example**  
 A rectangular box is 4 cm long, 3 cm wide, and 2 cm high. Its volume is 4 x 3 x 2 = 24 cm³. Since 1,000 cm³ = 1 litre, this is 24 / 1,000 = 0.024 litres.
 
@@ -177,6 +210,9 @@ A rectangular box is 4 cm long, 3 cm wide, and 2 cm high. Its volume is 4 x 3 x 
 
 **Core idea**  
 A variable is a letter that represents a number. You can combine like terms only. For multiplication, for example, 3 x a = 3a and a x a = a². In a formula such as y = 2x² - x, calculate x² first, then multiply by 2 and subtract x.
+
+**Thinking strategy**
+Treat a letter as a number whose value can change. Group only terms with the same variable and power. After simplifying, substitute a small number: both forms should give the same result.
 
 **Worked example**  
 Use y = 2x² - x when x = 3. First, x² = 3 x 3 = 9. Then y = 2 x 9 - 3 = 18 - 3 = 15.
@@ -196,6 +232,9 @@ Use y = 2x² - x when x = 3. First, x² = 3 x 3 = 9. Then y = 2 x 9 - 3 = 18 - 3
 **Core idea**  
 When all outcomes are equally likely, the probability of an event is the number of favourable outcomes divided by the total number of outcomes. A tree diagram shows successive choices. Without replacement, the contents change after the first draw.
 
+**Thinking strategy**
+Describe exactly which outcome you are looking for. Make a list or tree diagram so no outcome is missed. Record how many possibilities remain at each stage; without replacement, those numbers change. Check that the branch probabilities at a complete split add to 1.
+
 **Worked example**  
 A bag contains 3 red and 2 blue marbles. The probability of drawing red once is 3/5. If you draw a red marble and do not replace it, 2 red marbles remain out of 4 total. The probability of drawing two reds in a row is 3/5 x 2/4 = 6/20 = 3/10.
 
@@ -213,6 +252,9 @@ A bag contains 3 red and 2 blue marbles. The probability of drawing red once is 
 
 **Core idea**  
 A shape has line symmetry if it can be folded along a line so that the two parts match exactly. The angles in a triangle add to 180°; the angles in a quadrilateral add to 360°. Reflecting in the y-axis changes the sign of the x-coordinate; reflecting in the x-axis changes the sign of the y-coordinate. Reflecting in the origin changes both signs.
+
+**Thinking strategy**
+Mark equal sides and angles on your sketch before calculating. Use the total angle sum and subtract known angles one step at a time. In a reflection, a point stays the same distance from the mirror line; check that the original and reflected points are on opposite sides.
 
 **Worked example**  
 A triangle has angles of 55° and 65°. Its third angle is 180° - 55° - 65° = 60°.

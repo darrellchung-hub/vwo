@@ -55,13 +55,21 @@ ____________________________________________________________________________
 
 **Source:** §[paragraph]
 
-**Modelantwoord:**
+**Uitwerking / Model answer:**
 
-*[Modelantwoord in het Nederlands.]*
+1. *[Eerste betekenisvolle stap in het Nederlands.]*
 
-**Model answer:**
+   [Equivalent first step in English.]
 
-[English model answer.]
+2. *[Volgende reken- of redeneerstap in het Nederlands.]*
+
+   [Equivalent next step in English.]
+
+**Eindantwoord / Final answer:**
+
+*[Duidelijk eindantwoord in het Nederlands, met eenheid of uitleg als dat nodig is.]*
+
+[Clear final answer in English, with units or interpretation if needed.]
 
 **Punten:**
 
@@ -96,13 +104,21 @@ ____________________________________________________________________________
 
 **Source:** §[paragraph]
 
-**Modelantwoord:**
+**Uitwerking / Model answer:**
 
-*[Modelantwoord in het Nederlands.]*
+1. *[Eerste betekenisvolle stap in het Nederlands.]*
 
-**Model answer:**
+   [Equivalent first step in English.]
 
-[English model answer.]
+2. *[Volgende reken- of redeneerstap in het Nederlands.]*
+
+   [Equivalent next step in English.]
+
+**Eindantwoord / Final answer:**
+
+*[Duidelijk eindantwoord in het Nederlands, met eenheid of uitleg als dat nodig is.]*
+
+[Clear final answer in English, with units or interpretation if needed.]
 
 **Punten:**
 

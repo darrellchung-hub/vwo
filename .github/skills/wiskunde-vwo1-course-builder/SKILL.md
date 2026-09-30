@@ -1,6 +1,6 @@
 ---
 name: wiskunde-vwo1-course-builder
-description: 'Plan and create a full-year VWO 1 mathematics course or topic pack: topic sequences, explanations, worked examples, graduated exercises, tests, and answer keys. Use for Getal & Ruimte, Moderne Wiskunde, Dutch VWO year 1 wiskunde, or adapting public exam-paper ideas to the learner''s current level.'
+description: 'Plan and create a full-year VWO 1 mathematics course or topic pack, including explanations, practice, tests, study habits, mathematical thinking, visualization, and problem-solving strategies. Use for Getal & Ruimte, Moderne Wiskunde, or coaching a VWO 1 student to learn and reason independently.'
 argument-hint: 'Name Getal & Ruimte or Moderne Wiskunde and its edition if known; specify full year or topics and desired materials'
 user-invocable: true
 ---
@@ -14,6 +14,8 @@ Create a coherent full-year course or topic pack for a Dutch VWO 1 student. Supp
 - Build a course plan for one or more VWO 1 mathematics topics.
 - Build a full-year VWO 1 course using Getal & Ruimte or Moderne Wiskunde.
 - Explain a topic and make practice exercises or tests from a textbook chapter.
+- Teach a student how to study mathematics, visualize a problem, write clear working, choose a strategy, or recover from getting stuck.
+- Add topic-specific problem-solving prompts and reflection routines to VWO 1 lessons or practice materials.
 - Find publicly available Dutch exam questions that match a topic, or use them as inspiration for level-appropriate original practice.
 - Extract or summarize relevant material from a school textbook website the student can access.
 
@@ -73,7 +75,54 @@ Order concepts from prerequisites to more demanding applications. For Getal & Ru
 - Keep every exercise within the verified learning goals. Do not use a textbook exercise verbatim; create a new problem that practises the same skill.
 - Provide hints or scaffolded subparts where useful, without removing the reasoning the learner needs to practise.
 
-## 5. Create tests and answer keys
+## 5. Teach mathematical thinking and study habits
+
+Make the thinking process visible, not just the correct procedure. Model it in worked examples, then prompt the student to try the same moves with decreasing support. Treat a wrong attempt as information: identify the step that stopped making sense, repair that step, and retry a similar problem. Do not praise speed over clear reasoning.
+
+### A reusable solve-and-check routine
+
+Coach the learner through these moves, adapting the amount of prompting to the task:
+
+1. *Read and restate:* What is the question asking, in the learner's own words?
+2. *Sort the information:* What is known, what is unknown, and what information is relevant or extra?
+3. *Make it visible:* Choose a sketch, number line, table, bar model, coordinate grid, diagram, equation, or labelled figure that fits the problem.
+4. *Choose a first step:* Name the rule, operation, or representation that makes progress; if unsure, try a small example or simpler case.
+5. *Work clearly:* Write one meaningful step per line, keep units and labels attached, and add a short reason when the choice is not obvious.
+6. *Check:* Estimate or use an inverse operation, substitute the result, check units and labels, and answer the original question in a complete form.
+
+Do not require a drawing for every calculation. Ask the student to choose a representation that clarifies structure, and compare another representation when it helps reveal why a method works.
+
+### Topic-specific thinking prompts
+
+Choose the relevant row when teaching, setting practice, or coaching a stuck student. These are prompts and representations, not claims about the exact method sequence of a textbook edition.
+
+| Topic family | How to think about it | Useful representation and check |
+|---|---|---|
+| 3D shapes, nets, and views | Identify the solid first; track which faces meet, then imagine folding or rotating one view at a time. Keep front, side, and top viewpoints distinct. | Sketch and label faces, edges, and vertices; use a net or simple block drawing; check that paired faces and dimensions agree. |
+| Whole numbers, fractions, decimals, and percentages | Decide what the numbers represent and what form makes the operation easiest. For fractions, reason about equal-sized parts; for percentages, anchor the amount to 100% or 10%. | Use a number line, area/bar model, or place-value table; estimate the size before calculating and check that the result is plausible. |
+| Coordinates and graphs | Read axes, labels, and scale before plotting. Treat an ordered pair as horizontal movement first, vertical movement second; distinguish a point from a whole pattern. | Mark the origin, axes, units, and scale; make a value table; check a plotted point against its coordinates and neighboring pattern. |
+| Lines, angles, and triangle construction | Mark the known lengths, angle sizes, and relationships before measuring or drawing. For a construction, plan which fixed lengths or angles locate the next point. | Draw and label a rough diagram first, then use a ruler, protractor, or compass accurately; check alignment, units, and whether the construction meets every given condition. |
+| Ratios, scale, and proportional reasoning | Identify the two quantities and preserve their order and units. Ask whether both quantities grow by the same factor before using a proportional method. | Use a ratio table, double number line, or labelled scale sketch; check by comparing the unit rate or scaling back. |
+| Formulas and linear graphs | Name what each letter means. Separate the starting amount from the amount added per step; calculate a few values before deciding what the graph should look like. | Use a variable key, input-output table, and labelled axes; substitute a value into the formula and check it against the table or context. |
+| Negative numbers, squares, and powers | Place values on a number line and attend to direction and grouping symbols. For powers, distinguish repeated multiplication from a sign outside the power. | Use a number line or paired examples; check subtraction by adding back and check a power by writing its repeated factors. |
+| Formulas and equations | Treat an equation as a balance: preserve equality by doing the same operation on both sides. Undo operations in a deliberate order and keep equivalent expressions aligned. | Draw a balance model for an introductory equation; show each operation on a new line; substitute the solution into the original equation. |
+| Perimeter, area, and volume | Decide whether the question concerns boundary length, covered surface, or space inside. Sketch the shape, identify dimensions, and keep linear, square, and cubic units distinct. | Label a diagram and split a compound shape into manageable parts when appropriate; estimate first, then check units and whether the answer describes the requested quantity. |
+| Variables and algebra | Read a letter as a number that can vary. Group only like terms, and explain what each term counts before simplifying. | Use grouping marks for like terms and a substitution table to test equivalence; try a simple value in both expressions as a check, not as a proof. |
+| Probability and tree diagrams | Define the event clearly, count the possible outcomes, and notice whether the situation changes after a selection. Keep numerator and total outcomes tied to the same stage. | Draw an organized list, table, or tree; label branches and whether items are replaced; check that probabilities at a complete split sum to 1 and the final probability is between 0 and 1. |
+| Plane figures, angle sums, and symmetry | Mark equal sides, equal angles, parallel lines, or a possible mirror line before calculating. Break a complex figure into familiar shapes and identify which relationship justifies each step. | Add marks to a labelled sketch; use a fold or grid to test symmetry and angle-sum facts to find missing angles; check that a reflection follows the relevant distance and orientation rules. |
+
+### Practise studying, not just completing pages
+
+- Start with a short retrieval prompt: ask the learner to recall a definition, draw a model, or solve one familiar example without looking at notes. Then check and correct the recall.
+- Use worked-example fading: show a complete example, then remove one step for the learner to supply, then give a similar problem to solve independently.
+- Revisit important skills after a delay and mix a small number of previously learned problem types into new practice. Ask the student to identify the type before choosing a procedure.
+- Keep a compact error log with three fields: *What did I do? Where did my reasoning go off track? What will I check next time?* Rework a corrected problem later without copying the solution.
+- End a study session with a short reflection: What can I now do? What still confuses me? What clue will help me start next time?
+- Prefer focused practice with feedback and correction over repeatedly rereading a worked solution. Keep sessions short enough for the learner to explain their choices aloud or in writing.
+
+When coaching in conversation, ask one small, open question at a time (for example, “What do you know?”, “Could a sketch help?”, or “How can you check that?”). Do not immediately reveal the next step if the learner can make a useful attempt. If they remain stuck, offer one scaffold, then hand the reasoning back to them.
+
+## 6. Create tests and answer keys
 
 When tests are requested:
 
@@ -85,7 +134,7 @@ When tests are requested:
 - If a grading scale is requested, use the teacher's formula. Do not invent a school-specific grade conversion.
 - Include a short revision guide that maps mistakes back to lessons or learning goals.
 
-## 6. Save and organize the pack
+## 7. Save and organize the pack
 
 Read any relevant source files in `./input/Wiskunde/<topic>/`. For a full year, use a stable folder such as `./output/Wiskunde/VWO-1/`; for a topic pack, use `./output/Wiskunde/<topic>/`. Do not create DOCX or PDF files unless the user explicitly asks.
 
@@ -100,10 +149,13 @@ For a complete pack, prefer separate, clearly named files:
 
 Only create deliverables the user requested. Keep a source reference close to the material it supports, and distinguish sourced facts from original explanations and generated questions.
 
-## 7. Check before delivery
+## 8. Check before delivery
 
 - Every topic and assessment question maps to a stated learning goal and an accessible source or taught lesson.
 - The sequence respects prerequisites and does not silently import VWO 6 techniques into VWO 1 work.
+- Lessons and coaching prompts teach students how to start, represent, organize, explain, and check their reasoning, not only which procedure to apply.
+- Topic-specific strategies match the actual task; visual models are used where useful, not forced onto every exercise.
+- Study guidance includes active recall, spaced revisiting, worked-example fading, and learning from corrected errors at an age-appropriate scale.
 - Worked solutions and answer keys have been recalculated; units, notation, points, and numbering are consistent.
 - Questions are original and are not presented as copied textbook or official-exam material.
 - Source titles, links, question references, and answerability notes are accurate; inaccessible or uncertain material is clearly flagged.
