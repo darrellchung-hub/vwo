@@ -329,7 +329,7 @@ h2,
   justify-content: center;
 }
 
-.ella-layout .library {
+.profile-layout .library {
   flex: 1 1 0;
   min-width: 0;
   width: auto;
@@ -759,7 +759,7 @@ html[data-language-mode="en"] [data-language="all"] {
     padding: 0;
   }
 
-  .ella-layout .library {
+  .profile-layout .library {
     width: 100%;
     max-width: none;
     padding: 18px 0 52px;

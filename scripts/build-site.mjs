@@ -65,7 +65,7 @@ function buildEllaSidebar({ currentPage, ellaFiles, courseFiles, topics }) {
     return `<li><details class="ella-sidebar-topic"${topicKey === currentTopic ? ' open' : ''}><summary>${escapeHtml(title)}</summary><ul>${overview}${levelLinks}</ul></details></li>`;
   }).join('');
 
-  return `<aside class="ella-sidebar" aria-label="Ella's VWO 1 pages">
+  return `<aside class="ella-sidebar" data-profile-name="Ella" aria-label="Ella's VWO 1 pages">
         <button class="ella-sidebar-toggle" type="button" aria-expanded="false" aria-controls="ella-sidebar-navigation" aria-label="Open Ella navigation / Open Ella-navigatie" title="Open Ella navigation / Open Ella-navigatie"><span aria-hidden="true">›</span></button>
         <p class="ella-sidebar-title">Ella's VWO 1</p>
         <details class="ella-sidebar-details" open>
@@ -81,7 +81,36 @@ function buildEllaSidebar({ currentPage, ellaFiles, courseFiles, topics }) {
       </aside>`;
 }
 
-const ellaSidebarScript = `
+    function buildCurtisSidebar({ currentPage, subjectGroups }) {
+      const hrefFor = (target) => encodePath(path.posix.relative(path.posix.dirname(currentPage), target));
+      const linkFor = (target, label, className = '') => {
+        const current = target === currentPage ? ' aria-current="page"' : '';
+        return `<a${className ? ` class="${className}"` : ''} href="${hrefFor(target)}"${current}>${escapeHtml(label)}</a>`;
+      };
+      const subjectSections = [...subjectGroups.entries()].map(([subject, topics]) => {
+        const topicItems = [...topics.entries()].map(([topic, documents]) => {
+          const links = documents.map((document) => `<li>${linkFor(document.path, document.heading)}</li>`).join('');
+          if (topic === 'General') return links;
+          const isCurrent = documents.some((document) => document.path === currentPage);
+          return `<li><details class="ella-sidebar-topic"${isCurrent ? ' open' : ''}><summary>${escapeHtml(topic)}</summary><ul>${links}</ul></details></li>`;
+        }).join('');
+        return `<h2>${escapeHtml(subject)}</h2><ul class="ella-sidebar-links">${topicItems}</ul>`;
+      }).join('');
+
+      return `<aside class="ella-sidebar" data-profile-name="Curtis" aria-label="Curtis's 3 VWO pages">
+            <button class="ella-sidebar-toggle" type="button" aria-expanded="false" aria-controls="curtis-sidebar-navigation" aria-label="Open Curtis navigation / Open Curtis-navigatie" title="Open Curtis navigation / Open Curtis-navigatie"><span aria-hidden="true">›</span></button>
+            <p class="ella-sidebar-title">Curtis · 3 VWO</p>
+            <details class="ella-sidebar-details" open>
+              <summary>Curtis's 3 VWO navigation / Navigatie</summary>
+              <nav id="curtis-sidebar-navigation" aria-label="Curtis's 3 VWO navigation">
+                ${linkFor('curtis/index.html', 'Overview / Overzicht', 'ella-sidebar-overview')}
+                ${subjectSections}
+              </nav>
+            </details>
+          </aside>`;
+    }
+
+    const profileSidebarScript = `
     <script>
       (() => {
         const sidebar = document.querySelector('.ella-sidebar');
@@ -93,7 +122,8 @@ const ellaSidebarScript = `
           const collapsed = !open;
           sidebar.dataset.collapsed = String(collapsed);
           toggle.setAttribute('aria-expanded', String(open));
-          const label = open ? 'Close Ella navigation / Sluit Ella-navigatie' : 'Open Ella navigation / Open Ella-navigatie';
+          const profileName = sidebar.dataset.profileName || 'Study';
+          const label = open ? 'Close ' + profileName + ' navigation / Sluit de navigatie van ' + profileName : 'Open ' + profileName + ' navigation / Open de navigatie van ' + profileName;
           toggle.setAttribute('aria-label', label);
           toggle.title = label;
           toggle.firstElementChild.textContent = open ? '‹' : '›';
@@ -107,13 +137,14 @@ const ellaSidebarScript = `
           navigation.open = true;
           setOpen(false);
         };
-        sidebar.addEventListener('pointerenter', () => {
-          if (!compactLayout.matches) setOpen(true);
-        });
-        sidebar.addEventListener('pointerleave', () => {
+        document.addEventListener('pointermove', (event) => {
           if (compactLayout.matches) return;
-          if (document.activeElement === toggle) toggle.blur();
-          if (!sidebar.contains(document.activeElement)) setOpen(false);
+          const collapsed = sidebar.dataset.collapsed === 'true';
+          const pointerInsideDrawer = event.clientX >= 0 && event.clientX <= 270 && event.clientY >= 88;
+          const pointerOnEdgeHandle = event.clientX <= 42 && event.clientY >= 88;
+          const keyboardFocusInside = sidebar.contains(document.activeElement) && document.activeElement !== toggle;
+          if (collapsed && pointerOnEdgeHandle) setOpen(true);
+          else if (!collapsed && !pointerInsideDrawer && !keyboardFocusInside) setOpen(false);
         });
         sidebar.addEventListener('focusin', (event) => {
           if (!compactLayout.matches && event.target !== toggle) setOpen(true);
@@ -166,7 +197,7 @@ async function findMarkdownFiles(directory, relativeDirectory = '') {
   return found;
 }
 
-function pageTemplate({ title, stylesheet, content, breadcrumb, sidebarNavigation }) {
+function pageTemplate({ title, stylesheet, content, breadcrumb, sidebarNavigation, sidebarScript, contextLabel = '3 vwo · Practice library' }) {
   return `<!doctype html>
 <html lang="en">
   <head>
@@ -181,7 +212,7 @@ function pageTemplate({ title, stylesheet, content, breadcrumb, sidebarNavigatio
       <a class="site-mark" href="${breadcrumb.home}">Study Tests</a>
       <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="${breadcrumb.home}">${escapeHtml(breadcrumb.homeLabel)}</a><span aria-hidden="true">/</span><span>${escapeHtml(breadcrumb.topic)}</span></nav>
       <div class="site-header-tools">
-        <span class="site-context">3 vwo · Practice library</span>
+        <span class="site-context">${escapeHtml(contextLabel)}</span>
         <div class="language-switch" role="group" aria-label="Language view / Taalweergave" hidden>
           <span class="language-switch-label">Show / Toon</span>
           <button type="button" data-language-mode="nl" aria-pressed="false">Nederlands</button>
@@ -197,7 +228,7 @@ ${sidebarNavigation ?? ''}
         <p class="back-link"><a href="${breadcrumb.home}">Back to ${escapeHtml(breadcrumb.homeLabel)}</a></p>
       </main>
     </div>
-    <script>
+  <script>
       (() => {
         const article = document.querySelector('.markdown-body');
         const control = document.querySelector('.language-switch');
@@ -380,7 +411,7 @@ ${sidebarNavigation ?? ''}
         setMode(initialMode);
       })();
     </script>
-${sidebarNavigation ? ellaSidebarScript : ''}
+${sidebarScript ?? ''}
   </body>
 </html>
 `;
@@ -408,8 +439,26 @@ for (const file of ellaFiles) {
   if (!topics.has(topicKey)) topics.set(topicKey, new Map());
   topics.get(topicKey).set(`${level}${isAnswer ? '-answers' : ''}`, file);
 }
-const groups = new Map();
-
+const isCurtisMaterial = (relativePath) =>
+  !relativePath.startsWith('Wiskunde/VWO-1/') && relativePath !== 'Languages/German/progress.md';
+const curtisFiles = files.filter((file) => isCurtisMaterial(file.relativePath));
+const curtisSubjectGroups = new Map();
+for (const file of curtisFiles) {
+  const source = await readFile(file.absolutePath, 'utf8');
+  const relativeHtmlPath = file.relativePath.replace(/\.md$/i, '.html');
+  const heading = source.match(/^#\s+(.+)$/m)?.[1]?.trim()
+    ?? path.basename(file.relativePath, path.extname(file.relativePath)).replaceAll('_', ' ');
+  const pathParts = file.relativePath.split('/');
+  const subject = pathParts[0] ?? 'Other';
+  const topic = pathParts.slice(1, -1).map((part) => part.replace(/[-_]+/g, ' ')).join(' / ') || 'General';
+  if (!curtisSubjectGroups.has(subject)) curtisSubjectGroups.set(subject, new Map());
+  const subjectTopics = curtisSubjectGroups.get(subject);
+  if (!subjectTopics.has(topic)) subjectTopics.set(topic, []);
+  subjectTopics.get(topic).push({ heading, path: relativeHtmlPath });
+}
+for (const subjectTopics of curtisSubjectGroups.values()) {
+  for (const documents of subjectTopics.values()) documents.sort((left, right) => left.heading.localeCompare(right.heading, 'en'));
+}
 for (const file of files) {
   const source = await readFile(file.absolutePath, 'utf8');
   const relativeHtmlPath = file.relativePath.replace(/\.md$/i, '.html');
@@ -417,14 +466,15 @@ for (const file of files) {
   const stylesheet = encodePath(path.posix.relative(path.posix.dirname(relativeHtmlPath), 'assets/site.css'));
   const defaultHome = encodePath(path.posix.relative(path.posix.dirname(relativeHtmlPath), 'index.html'));
   const isEllaVwo1 = file.relativePath.startsWith('Wiskunde/VWO-1/');
-  const home = isEllaVwo1
-    ? encodePath(path.posix.relative(path.posix.dirname(relativeHtmlPath), 'ella/index.html'))
+  const isCurtisVwo3 = isCurtisMaterial(file.relativePath);
+  const profileHome = isEllaVwo1 ? 'ella/index.html' : 'curtis/index.html';
+  const home = isEllaVwo1 || isCurtisVwo3
+    ? encodePath(path.posix.relative(path.posix.dirname(relativeHtmlPath), profileHome))
     : defaultHome;
-  const homeLabel = isEllaVwo1 ? "Ella's VWO 1" : 'All tests';
+  const homeLabel = isEllaVwo1 ? "Ella's VWO 1" : isCurtisVwo3 ? "Curtis's 3 VWO" : 'All tests';
   const heading = source.match(/^#\s+(.+)$/m)?.[1]?.trim() ?? path.basename(file.relativePath, path.extname(file.relativePath)).replaceAll('_', ' ');
   const pathParts = file.relativePath.split('/');
-  const subject = pathParts[0] ?? 'Other';
-  const topic = pathParts.length > 2 ? pathParts[1] : subject;
+  const topic = pathParts.length > 2 ? pathParts[1] : pathParts[0] ?? 'Other';
 
   await mkdir(path.dirname(targetPath), { recursive: true });
   await writeFile(targetPath, pageTemplate({
@@ -432,24 +482,15 @@ for (const file of files) {
     stylesheet,
     content: rewriteMarkdownLinksToHtml(await marked.parse(source)),
     breadcrumb: { home, homeLabel, topic },
-    sidebarNavigation: isEllaVwo1 ? buildEllaSidebar({ currentPage: relativeHtmlPath, ellaFiles, courseFiles, topics }) : '',
+    contextLabel: isEllaVwo1 ? 'VWO 1 · Ella' : isCurtisVwo3 ? '3 VWO · Curtis' : '3 vwo · Practice library',
+    sidebarNavigation: isEllaVwo1
+      ? buildEllaSidebar({ currentPage: relativeHtmlPath, ellaFiles, courseFiles, topics })
+      : isCurtisVwo3
+        ? buildCurtisSidebar({ currentPage: relativeHtmlPath, subjectGroups: curtisSubjectGroups })
+        : '',
+    sidebarScript: isEllaVwo1 || isCurtisVwo3 ? profileSidebarScript : '',
   }));
-
-  if (!groups.has(subject)) groups.set(subject, []);
-  groups.get(subject).push({ heading, topic, href: encodePath(relativeHtmlPath) });
 }
-
-const sections = [...groups.entries()].map(([subject, documents]) => `
-      <section class="subject-section" aria-labelledby="subject-${encodeURIComponent(subject)}">
-        <h2 id="subject-${encodeURIComponent(subject)}">${escapeHtml(subject)}</h2>
-        <ul class="document-list">
-${documents.map((document) => `          <li><a class="document-link" href="${document.href}"><span class="document-topic">${escapeHtml(document.topic)}</span><span class="document-title">${escapeHtml(document.heading)}</span><span class="document-action" aria-hidden="true">Open <span>→</span></span></a></li>`).join('\n')}
-        </ul>
-      </section>`).join('\n');
-
-const indexContent = files.length === 0
-  ? '<p class="empty-state">No Markdown tests found yet. Add a <code>.md</code> file under <code>output/</code> and rebuild.</p>'
-  : sections;
 
 await writeFile(path.join(siteRoot, 'index.html'), `<!doctype html>
 <html lang="en">
@@ -466,10 +507,9 @@ await writeFile(path.join(siteRoot, 'index.html'), `<!doctype html>
       <span class="site-context">3 vwo · Practice library</span>
     </header>
     <main class="library">
-      <div class="library-heading"><p class="eyebrow">Practice library</p><h1>Choose a test.</h1><p class="intro">Bilingual practice materials, organised by subject.</p></div>
+      <div class="library-heading"><p class="eyebrow">Study library</p><h1>Choose a student.</h1><p class="intro">Open a personal study space to continue.</p></div>
       <p class="profile-entry"><a href="ella/">Ella's VWO 1 page <span aria-hidden="true">→</span></a><span><em>Haar eigen startpagina voor VWO 1.</em> Her own starting page for VWO 1.</span></p>
-${indexContent}
-      <footer class="library-footer">${files.length} ${files.length === 1 ? 'document' : 'documents'}</footer>
+      <p class="profile-entry"><a href="curtis/">Curtis's 3 VWO page <span aria-hidden="true">→</span></a><span>His study materials, grouped by subject and topic.</span></p>
     </main>
   </body>
 </html>
@@ -563,7 +603,7 @@ await writeFile(path.join(siteRoot, 'ella', 'index.html'), `<!doctype html>
       <a class="site-mark" href="../index.html">Study Tests</a>
       <span class="site-context">VWO 1 · Ella</span>
     </header>
-    <div class="document-layout has-sidebar ella-layout">
+    <div class="document-layout has-sidebar profile-layout ella-layout">
 ${buildEllaSidebar({ currentPage: 'ella/index.html', ellaFiles, courseFiles, topics })}
     <main class="library">
       <div class="library-heading"><p class="eyebrow">Ella's study page</p><h1>VWO 1</h1><p class="intro"><em>Een eigen plek om rustig te beginnen met wiskunde.</em></p><p class="intro">A dedicated place to get started with mathematics at her own pace.</p><p class="video-disclaimer"><em>Video's zijn extra uitleg; sommige komen uit de 13e editie of zijn een vooruitblik op 2 VWO. Controleer steeds of het onderwerp aansluit bij haar les.</em> Videos are optional explanations; some are from the 13th edition or preview 2 VWO. Check that each topic matches what she is learning.</p></div>
@@ -572,7 +612,42 @@ ${topicSections}
       <p class="back-link"><a href="../index.html">Back to all study materials</a></p>
     </main>
     </div>
-${ellaSidebarScript}
+${profileSidebarScript}
+  </body>
+</html>
+`);
+
+const curtisSections = [...curtisSubjectGroups.entries()].map(([subject, subjectTopics], subjectIndex) => {
+  const documents = [...subjectTopics.entries()].flatMap(([topic, topicDocuments]) =>
+    topicDocuments.map((document) => ({ ...document, topic }))
+  );
+  return `      <section class="subject-section" aria-labelledby="curtis-subject-${subjectIndex}"><h2 id="curtis-subject-${subjectIndex}">${escapeHtml(subject)}</h2><ul class="document-list">${documents.map((document) => `<li><a class="document-link" href="${encodePath(path.posix.join('..', document.path))}"><span class="document-topic">${escapeHtml(document.topic)}</span><span class="document-title">${escapeHtml(document.heading)}</span><span class="document-action" aria-hidden="true">Open <span>→</span></span></a></li>`).join('')}</ul></section>`;
+}).join('\n');
+
+await mkdir(path.join(siteRoot, 'curtis'), { recursive: true });
+await writeFile(path.join(siteRoot, 'curtis', 'index.html'), `<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#174b3b">
+    <title>Curtis's 3 VWO | Study Tests</title>
+    <link rel="stylesheet" href="../assets/site.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="site-mark" href="../index.html">Study Tests</a>
+      <span class="site-context">3 VWO · Curtis</span>
+    </header>
+    <div class="document-layout has-sidebar profile-layout curtis-layout">
+${buildCurtisSidebar({ currentPage: 'curtis/index.html', subjectGroups: curtisSubjectGroups })}
+      <main class="library">
+        <div class="library-heading"><p class="eyebrow">Curtis's study page</p><h1>3 VWO</h1><p class="intro">Study materials grouped by subject and topic.</p></div>
+${curtisSections}
+        <p class="back-link"><a href="../index.html">Back to all study materials</a></p>
+      </main>
+    </div>
+${profileSidebarScript}
   </body>
 </html>
 `);
