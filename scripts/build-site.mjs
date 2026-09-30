@@ -23,6 +23,120 @@ function encodePath(value) {
   return value.split('/').map(encodeURIComponent).join('/');
 }
 
+function buildEllaSidebar({ currentPage, ellaFiles, courseFiles, topics }) {
+  const hrefFor = (target) => {
+    const [targetPath, fragment] = target.split('#');
+    const relativePath = path.posix.relative(path.posix.dirname(currentPage), targetPath);
+    return `${encodePath(relativePath || path.posix.basename(targetPath))}${fragment ? `#${fragment}` : ''}`;
+  };
+  const linkFor = (target, label, className = '') => {
+    const current = target === currentPage ? ' aria-current="page"' : '';
+    return `<a${className ? ` class="${className}"` : ''} href="${hrefFor(target)}"${current}>${escapeHtml(label)}</a>`;
+  };
+  const courseLabels = new Map([
+    ['Course-Plan.md', 'Year plan / Jaaroverzicht'],
+    ['Lessons-and-Exercises-NL.md', 'Lessons and exercises · NL / Lessen en oefeningen · NL'],
+    ['Lessons-and-Exercises-EN.md', 'Lessons and exercises · EN / Lessen en oefeningen · EN'],
+    ['Answer-Key-NL.md', 'Course answers · NL / Cursusantwoorden · NL'],
+    ['Answer-Key-EN.md', 'Course answers · EN / Cursusantwoorden · EN'],
+  ]);
+  const courseLinks = courseFiles.map((file) => {
+    const target = path.posix.join('Wiskunde/VWO-1', file.relativePath.replace(/\.md$/i, '.html'));
+    return `<li>${linkFor(target, courseLabels.get(path.basename(file.relativePath)) ?? path.basename(file.relativePath))}</li>`;
+  }).join('');
+  const currentTopic = path.basename(currentPage).match(/^(\d{2}-.+)-Level-[12]/)?.[1];
+  const topicLinks = [...topics.entries()].map(([topicKey, levels]) => {
+    const title = topicKey.replace(/^\d{2}-/, '').replaceAll('-', ' ');
+    const overview = `<li>${linkFor(`ella/index.html#topic-${topicKey}`, 'Topic overview / Onderwerp')}</li>`;
+    const levelLinks = [1, 2].map((level) => {
+      const practice = levels.get(String(level));
+      const answers = levels.get(`${level}-answers`);
+      const links = [];
+      if (practice) {
+        const target = path.posix.join('Wiskunde/VWO-1', practice.relativePath.replace(/\.md$/i, '.html'));
+        links.push(`<li>${linkFor(target, `Level ${level} practice / Oefenen`)}</li>`);
+      }
+      if (answers) {
+        const target = path.posix.join('Wiskunde/VWO-1', answers.relativePath.replace(/\.md$/i, '.html'));
+        links.push(`<li>${linkFor(target, `Level ${level} answers / Antwoorden`)}</li>`);
+      }
+      return links.join('');
+    }).join('');
+    return `<li><details class="ella-sidebar-topic"${topicKey === currentTopic ? ' open' : ''}><summary>${escapeHtml(title)}</summary><ul>${overview}${levelLinks}</ul></details></li>`;
+  }).join('');
+
+  return `<aside class="ella-sidebar" aria-label="Ella's VWO 1 pages">
+        <button class="ella-sidebar-toggle" type="button" aria-expanded="false" aria-controls="ella-sidebar-navigation" aria-label="Open Ella navigation / Open Ella-navigatie" title="Open Ella navigation / Open Ella-navigatie"><span aria-hidden="true">›</span></button>
+        <p class="ella-sidebar-title">Ella's VWO 1</p>
+        <details class="ella-sidebar-details" open>
+          <summary>Ella's VWO 1 navigation / Navigatie</summary>
+          <nav id="ella-sidebar-navigation" aria-label="Ella's VWO 1 navigation">
+            ${linkFor('ella/index.html', 'Overview / Overzicht', 'ella-sidebar-overview')}
+            <h2>Course materials / Cursusmateriaal</h2>
+            <ul class="ella-sidebar-links">${courseLinks}</ul>
+            <h2>Practice by chapter / Oefenen per hoofdstuk</h2>
+            <ul class="ella-sidebar-topics">${topicLinks}</ul>
+          </nav>
+        </details>
+      </aside>`;
+}
+
+const ellaSidebarScript = `
+    <script>
+      (() => {
+        const sidebar = document.querySelector('.ella-sidebar');
+        const navigation = document.querySelector('.ella-sidebar-details');
+        const toggle = document.querySelector('.ella-sidebar-toggle');
+        if (!sidebar || !navigation || !toggle) return;
+        const compactLayout = window.matchMedia('(max-width: 860px)');
+        const setOpen = (open) => {
+          const collapsed = !open;
+          sidebar.dataset.collapsed = String(collapsed);
+          toggle.setAttribute('aria-expanded', String(open));
+          const label = open ? 'Close Ella navigation / Sluit Ella-navigatie' : 'Open Ella navigation / Open Ella-navigatie';
+          toggle.setAttribute('aria-label', label);
+          toggle.title = label;
+          toggle.firstElementChild.textContent = open ? '‹' : '›';
+        };
+        const updateLayout = () => {
+          if (compactLayout.matches) {
+            setOpen(true);
+            navigation.open = false;
+            return;
+          }
+          navigation.open = true;
+          setOpen(false);
+        };
+        sidebar.addEventListener('pointerenter', () => {
+          if (!compactLayout.matches) setOpen(true);
+        });
+        sidebar.addEventListener('pointerleave', () => {
+          if (compactLayout.matches) return;
+          if (document.activeElement === toggle) toggle.blur();
+          if (!sidebar.contains(document.activeElement)) setOpen(false);
+        });
+        sidebar.addEventListener('focusin', (event) => {
+          if (!compactLayout.matches && event.target !== toggle) setOpen(true);
+        });
+        sidebar.addEventListener('focusout', (event) => {
+          if (!compactLayout.matches && !sidebar.contains(event.relatedTarget)) setOpen(false);
+        });
+        toggle.addEventListener('click', (event) => {
+          if (compactLayout.matches || event.detail !== 0) return;
+          const open = sidebar.dataset.collapsed === 'true';
+          setOpen(open);
+          if (open) navigation.querySelector('a').focus();
+        });
+        sidebar.addEventListener('keydown', (event) => {
+          if (event.key !== 'Escape' || compactLayout.matches) return;
+          setOpen(false);
+          toggle.focus();
+        });
+        updateLayout();
+        compactLayout.addEventListener('change', updateLayout);
+      })();
+    </script>`;
+
 function rewriteMarkdownLinksToHtml(content) {
   return content.replace(/(<a\b[^>]*\bhref=")([^"]+)(")/gi, (anchor, prefix, href, suffix) => {
     if (/^(?:[a-z][a-z\d+.-]*:|\/\/|#)/i.test(href)) return anchor;
@@ -52,7 +166,7 @@ async function findMarkdownFiles(directory, relativeDirectory = '') {
   return found;
 }
 
-function pageTemplate({ title, stylesheet, content, breadcrumb }) {
+function pageTemplate({ title, stylesheet, content, breadcrumb, sidebarNavigation }) {
   return `<!doctype html>
 <html lang="en">
   <head>
@@ -65,19 +179,24 @@ function pageTemplate({ title, stylesheet, content, breadcrumb }) {
   <body>
     <header class="site-header">
       <a class="site-mark" href="${breadcrumb.home}">Study Tests</a>
-      <span class="site-context">3 vwo · Practice library</span>
-    </header>
-    <main class="document">
       <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="${breadcrumb.home}">${escapeHtml(breadcrumb.homeLabel)}</a><span aria-hidden="true">/</span><span>${escapeHtml(breadcrumb.topic)}</span></nav>
-      <div class="language-switch" role="group" aria-label="Language view / Taalweergave" hidden>
-        <span class="language-switch-label">Show / Toon</span>
-        <button type="button" data-language-mode="nl" aria-pressed="false">Nederlands</button>
-        <button type="button" data-language-mode="en" aria-pressed="false">English</button>
-        <button type="button" data-language-mode="all" aria-pressed="true">Both / Beide</button>
+      <div class="site-header-tools">
+        <span class="site-context">3 vwo · Practice library</span>
+        <div class="language-switch" role="group" aria-label="Language view / Taalweergave" hidden>
+          <span class="language-switch-label">Show / Toon</span>
+          <button type="button" data-language-mode="nl" aria-pressed="false">Nederlands</button>
+          <button type="button" data-language-mode="en" aria-pressed="false">English</button>
+          <button type="button" data-language-mode="all" aria-pressed="true">Both / Beide</button>
+        </div>
       </div>
-      <article class="markdown-body">${content}</article>
-      <p class="back-link"><a href="${breadcrumb.home}">Back to ${escapeHtml(breadcrumb.homeLabel)}</a></p>
-    </main>
+    </header>
+    <div class="document-layout${sidebarNavigation ? ' has-sidebar' : ''}">
+${sidebarNavigation ?? ''}
+      <main class="document">
+        <article class="markdown-body">${content}</article>
+        <p class="back-link"><a href="${breadcrumb.home}">Back to ${escapeHtml(breadcrumb.homeLabel)}</a></p>
+      </main>
+    </div>
     <script>
       (() => {
         const article = document.querySelector('.markdown-body');
@@ -261,6 +380,7 @@ function pageTemplate({ title, stylesheet, content, breadcrumb }) {
         setMode(initialMode);
       })();
     </script>
+${sidebarNavigation ? ellaSidebarScript : ''}
   </body>
 </html>
 `;
@@ -273,6 +393,21 @@ await cp(stylesheetSource, stylesheetTarget);
 const files = (await findMarkdownFiles(sourceRoot)).sort((left, right) =>
   left.relativePath.localeCompare(right.relativePath, 'en')
 );
+const ellaFiles = files
+  .filter((file) => file.relativePath.startsWith('Wiskunde/VWO-1/'))
+  .map((file) => ({ ...file, relativePath: file.relativePath.slice('Wiskunde/VWO-1/'.length) }));
+const ellaFileByName = new Map(ellaFiles.map((file) => [path.basename(file.relativePath), file]));
+const courseFiles = ['Course-Plan.md', 'Lessons-and-Exercises-NL.md', 'Lessons-and-Exercises-EN.md', 'Answer-Key-NL.md', 'Answer-Key-EN.md']
+  .map((name) => ellaFileByName.get(name))
+  .filter(Boolean);
+const topics = new Map();
+for (const file of ellaFiles) {
+  const match = path.basename(file.relativePath).match(/^(\d{2}-.+)-Level-([12])(-Answers)?\.md$/);
+  if (!match) continue;
+  const [, topicKey, level, isAnswer] = match;
+  if (!topics.has(topicKey)) topics.set(topicKey, new Map());
+  topics.get(topicKey).set(`${level}${isAnswer ? '-answers' : ''}`, file);
+}
 const groups = new Map();
 
 for (const file of files) {
@@ -297,6 +432,7 @@ for (const file of files) {
     stylesheet,
     content: rewriteMarkdownLinksToHtml(await marked.parse(source)),
     breadcrumb: { home, homeLabel, topic },
+    sidebarNavigation: isEllaVwo1 ? buildEllaSidebar({ currentPage: relativeHtmlPath, ellaFiles, courseFiles, topics }) : '',
   }));
 
   if (!groups.has(subject)) groups.set(subject, []);
@@ -339,12 +475,7 @@ ${indexContent}
 </html>
 `);
 
-const ellaFiles = await findMarkdownFiles(ellaMaterialsRoot);
-const ellaFileByName = new Map(ellaFiles.map((file) => [path.basename(file.relativePath), file]));
 const ellaHref = (file) => encodePath(path.posix.join('..', 'Wiskunde', 'VWO-1', file.relativePath.replace(/\.md$/i, '.html')));
-const courseFiles = ['Course-Plan.md', 'Lessons-and-Exercises-NL.md', 'Lessons-and-Exercises-EN.md', 'Answer-Key-NL.md', 'Answer-Key-EN.md']
-  .map((name) => ellaFileByName.get(name))
-  .filter(Boolean);
 const courseLinks = courseFiles.map((file) => {
   const name = path.basename(file.relativePath, '.md')
     .replace('Course-Plan', 'Year plan')
@@ -354,15 +485,6 @@ const courseLinks = courseFiles.map((file) => {
     .replace('Answer-Key-EN', 'Course answer key · English');
   return `        <li><a class="document-link" href="${ellaHref(file)}"><span class="document-title">${escapeHtml(name)}</span><span class="document-action" aria-hidden="true">Open <span>→</span></span></a></li>`;
 }).join('\n');
-const topics = new Map();
-
-for (const file of ellaFiles) {
-  const match = path.basename(file.relativePath).match(/^(\d{2}-.+)-Level-([12])(-Answers)?\.md$/);
-  if (!match) continue;
-  const [, topicKey, level, isAnswer] = match;
-  if (!topics.has(topicKey)) topics.set(topicKey, new Map());
-  topics.get(topicKey).set(`${level}${isAnswer ? '-answers' : ''}`, file);
-}
 
 const videoMatches = {
   '01-Ruimtefiguren': [
@@ -441,12 +563,16 @@ await writeFile(path.join(siteRoot, 'ella', 'index.html'), `<!doctype html>
       <a class="site-mark" href="../index.html">Study Tests</a>
       <span class="site-context">VWO 1 · Ella</span>
     </header>
+    <div class="document-layout has-sidebar ella-layout">
+${buildEllaSidebar({ currentPage: 'ella/index.html', ellaFiles, courseFiles, topics })}
     <main class="library">
       <div class="library-heading"><p class="eyebrow">Ella's study page</p><h1>VWO 1</h1><p class="intro"><em>Een eigen plek om rustig te beginnen met wiskunde.</em></p><p class="intro">A dedicated place to get started with mathematics at her own pace.</p><p class="video-disclaimer"><em>Video's zijn extra uitleg; sommige komen uit de 13e editie of zijn een vooruitblik op 2 VWO. Controleer steeds of het onderwerp aansluit bij haar les.</em> Videos are optional explanations; some are from the 13th edition or preview 2 VWO. Check that each topic matches what she is learning.</p></div>
       <section class="subject-section" aria-labelledby="course-materials"><h2 id="course-materials">Course materials</h2><ul class="document-list">\n${courseLinks}\n      </ul></section>
 ${topicSections}
       <p class="back-link"><a href="../index.html">Back to all study materials</a></p>
     </main>
+    </div>
+${ellaSidebarScript}
   </body>
 </html>
 `);
