@@ -14,7 +14,7 @@
 | Niveau | [Basis / Uitstekend] |
 | Totaal | [Totaal aantal punten] |
 | Tijd | 45 minuten |
-| Naam en datum | ____________________    Datum: __________ |
+| Naam en datum | Noteer dit eventueel in je aantekeningen. |
 
 | Details | Fill in |
 |---|---|
@@ -24,7 +24,7 @@
 | Level | [Pass / Excellent] |
 | Total | [Total points] |
 | Time | 45 minutes |
-| Name and date | ____________________    Date: __________ |
+| Name and date | Record these in your notes if needed. |
 
 *Instructies: Beantwoord alle vragen. De antwoorden staan verborgen onder elke vraag.*
 
@@ -46,7 +46,9 @@ Start with a direct answer. Then explain your reasoning step by step, for exampl
 
 [English translation of the question.]
 
-____________________________________________________________________________
+*Werk je antwoord uit in je aantekeningen als dat nodig is.*
+
+Work out your answer in your notes if needed.
 
 <details>
 <summary><em>Antwoord tonen</em><br>Show answer</summary>
@@ -95,7 +97,9 @@ ____________________________________________________________________________
 
 [English translation of the question.]
 
-____________________________________________________________________________
+*Werk je antwoord uit in je aantekeningen als dat nodig is.*
+
+Work out your answer in your notes if needed.
 
 <details>
 <summary><em>Antwoord tonen</em><br>Show answer</summary>

@@ -23,6 +23,10 @@ function encodePath(value) {
   return value.split('/').map(encodeURIComponent).join('/');
 }
 
+function stripYamlFrontmatter(markdown) {
+  return markdown.replace(/^---\r?\n[\s\S]*?\r?\n---\r?\n/, '');
+}
+
 function buildEllaSidebar({ currentPage, ellaFiles, courseFiles, topics }) {
   const hrefFor = (target) => {
     const [targetPath, fragment] = target.split('#');
@@ -242,8 +246,103 @@ ${sidebarNavigation ?? ''}
           const content = [...paragraph.childNodes].filter((node) => node.nodeType !== Node.TEXT_NODE || node.textContent.trim());
           return content.length === 1 && content[0].nodeType === Node.ELEMENT_NODE && content[0].tagName === 'EM';
         };
+        const languageSpan = (text, language) => {
+          const span = document.createElement('span');
+          span.textContent = text;
+          markLanguage(span, language);
+          return span;
+        };
+        const languageSeparator = () => {
+          const separator = document.createElement('span');
+          separator.textContent = ' / ';
+          separator.dataset.language = 'all';
+          return separator;
+        };
+        const splitBilingualHeading = (heading) => {
+          if (!/^H[1-6]$/.test(heading.tagName) || heading.children.length || !heading.textContent.includes(' / ')) return;
+          const [firstPart, ...remainingParts] = heading.textContent.split(' / ');
+          const secondPart = remainingParts.join(' / ');
+          if (!firstPart.trim() || !secondPart.trim()) return;
+          const englishFirstHeadings = new Set(['key terms', 'figures and tables']);
+          const firstIsEnglish = englishFirstHeadings.has(firstPart.trim().toLowerCase());
+          const dutch = firstIsEnglish ? secondPart : firstPart;
+          const english = firstIsEnglish ? firstPart : secondPart;
+          heading.replaceChildren(
+            languageSpan(dutch.trim(), 'nl'),
+            languageSeparator(),
+            languageSpan(english.trim(), 'en'),
+          );
+        };
+        const splitQuestionItems = () => {
+          const labelTranslations = new Map([
+            ['Prompt / Vraag:', ['Vraag:', 'Prompt:']],
+            ['Response / Antwoordvorm:', ['Antwoordvorm:', 'Response:']],
+            ['Source limitation / Bronbeperking:', ['Bronbeperking:', 'Source limitation:']],
+            ['Answer / Antwoord:', ['Antwoord:', 'Answer:']],
+            ['Source note / Bronnotitie:', ['Bronnotitie:', 'Source note:']],
+          ]);
+          for (const item of article.querySelectorAll('li')) {
+            if (!/^Q\\d/.test(item.textContent.trim())) continue;
+            for (const label of item.querySelectorAll('strong')) {
+              const text = label.textContent;
+              for (const [sourceLabel, [dutchLabel, englishLabel]] of labelTranslations) {
+                if (!text.endsWith(sourceLabel)) continue;
+                const prefix = text.slice(0, -sourceLabel.length);
+                label.replaceChildren(
+                  document.createTextNode(prefix),
+                  languageSpan(dutchLabel, 'nl'),
+                  languageSeparator(),
+                  languageSpan(englishLabel, 'en'),
+                  document.createTextNode(' '),
+                );
+                break;
+              }
+            }
+            const dutchPrompt = item.querySelector('em');
+            if (dutchPrompt) {
+              markLanguage(dutchPrompt, 'nl');
+              const slash = dutchPrompt.nextSibling;
+              if (slash?.nodeType === Node.TEXT_NODE && /^\\s*\\/\\s*/.test(slash.textContent)) {
+                const englishPrompt = document.createElement('span');
+                markLanguage(englishPrompt, 'en');
+                const remainingText = slash.textContent.replace(/^\\s*\\/\\s*/, '');
+                if (remainingText) englishPrompt.append(document.createTextNode(remainingText));
+                let sibling = slash.nextSibling;
+                while (sibling && !(sibling.nodeType === Node.ELEMENT_NODE && sibling.tagName === 'STRONG')) {
+                  const next = sibling.nextSibling;
+                  englishPrompt.append(sibling);
+                  sibling = next;
+                }
+                const separator = document.createElement('span');
+                separator.textContent = ' / ';
+                separator.dataset.language = 'all';
+                slash.replaceWith(separator, englishPrompt, document.createTextNode(' '));
+              }
+            }
+            const walker = document.createTreeWalker(item, NodeFilter.SHOW_TEXT);
+            const textNodes = [];
+            while (walker.nextNode()) textNodes.push(walker.currentNode);
+            for (const textNode of textNodes.filter((node) => node.textContent.includes(' / '))) {
+              if (/^\\s*\\//.test(textNode.textContent) || !textNode.textContent.includes(' / ')) continue;
+              const pair = textNode.textContent.match(/^(.*?)\\s+\\/\\s+(.*?)$/s);
+              if (!pair || !pair[1].trim() || !pair[2].trim()) continue;
+              const separator = document.createElement('span');
+              separator.textContent = ' / ';
+              separator.dataset.language = 'all';
+              textNode.replaceWith(
+                languageSpan(pair[2].trim(), 'nl'),
+                separator,
+                languageSpan(pair[1].trim(), 'en'),
+                document.createTextNode(' '),
+              );
+            }
+          }
+        };
+
+        for (const heading of article.querySelectorAll('h1, h2, h3, h4, h5, h6')) splitBilingualHeading(heading);
 
         for (const heading of article.querySelectorAll('h1, h3')) {
+          if (heading.querySelector('[data-language]')) continue;
           const translation = heading.nextElementSibling;
           if (translation && translation.tagName === 'P' && isDutchParagraph(translation)) {
             markLanguage(heading, 'nl');
@@ -256,6 +355,7 @@ ${sidebarNavigation ?? ''}
           ['pacing and alignment notes', 'en'],
         ]);
         for (const heading of article.querySelectorAll('h2')) {
+          if (heading.querySelector('[data-language]')) continue;
           const translation = heading.nextElementSibling;
           if (!translation || translation.tagName !== 'P' || !isDutchParagraph(translation)) continue;
           const language = headingLanguages.get(heading.textContent.trim().toLowerCase());
@@ -279,6 +379,18 @@ ${sidebarNavigation ?? ''}
           markLanguage(paragraph, 'nl');
           markLanguage(translation, 'en');
         }
+
+        for (const item of article.querySelectorAll('li')) {
+          if (!/^Source\s/i.test(item.textContent.trim())) continue;
+          for (const paragraph of item.querySelectorAll('p')) {
+            const dutch = paragraph.querySelector('em');
+            const translation = paragraph.nextElementSibling;
+            if (!dutch || !translation || translation.tagName !== 'P' || isDutchParagraph(translation)) continue;
+            markLanguage(dutch, 'nl');
+            markLanguage(translation, 'en');
+          }
+        }
+        splitQuestionItems();
 
         for (const item of article.querySelectorAll('li')) {
           const breaks = [...item.childNodes].filter((node) => node.nodeType === Node.ELEMENT_NODE && node.tagName === 'BR');
@@ -459,6 +571,7 @@ for (const file of curtisFiles) {
 for (const subjectTopics of curtisSubjectGroups.values()) {
   for (const documents of subjectTopics.values()) documents.sort((left, right) => left.heading.localeCompare(right.heading, 'en'));
 }
+const copiedMediaDirectories = new Set();
 for (const file of files) {
   const source = await readFile(file.absolutePath, 'utf8');
   const relativeHtmlPath = file.relativePath.replace(/\.md$/i, '.html');
@@ -477,10 +590,20 @@ for (const file of files) {
   const topic = pathParts.length > 2 ? pathParts[1] : pathParts[0] ?? 'Other';
 
   await mkdir(path.dirname(targetPath), { recursive: true });
+  const mediaSource = path.join(path.dirname(file.absolutePath), 'media');
+  if (!copiedMediaDirectories.has(mediaSource)) {
+    const mediaTarget = path.join(siteRoot, ...path.dirname(relativeHtmlPath).split('/'), 'media');
+    try {
+      await cp(mediaSource, mediaTarget, { recursive: true });
+      copiedMediaDirectories.add(mediaSource);
+    } catch (error) {
+      if (error.code !== 'ENOENT') throw error;
+    }
+  }
   await writeFile(targetPath, pageTemplate({
     title: heading,
     stylesheet,
-    content: rewriteMarkdownLinksToHtml(await marked.parse(source)),
+    content: rewriteMarkdownLinksToHtml(await marked.parse(stripYamlFrontmatter(source))),
     breadcrumb: { home, homeLabel, topic },
     contextLabel: isEllaVwo1 ? 'VWO 1 · Ella' : isCurtisVwo3 ? '3 VWO · Curtis' : '3 vwo · Practice library',
     sidebarNavigation: isEllaVwo1
