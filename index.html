@@ -1,0 +1,114 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<meta name="claude:viewport-fit-sides" content="cover">
+<title>Biologie H6 Oefentoetsen</title>
+<style>
+:root{--bg:#f6f5f1;--card:#fff;--ink:#1d2321;--muted:#5d6763;--line:#e2e0d9;--accent:#2f6b4f;--accent-soft:#e6f0ea;--ans:#f3f8f5;--R:#6b7280;--T1:#2563a8;--T2:#8a5a00;--I:#a33a5b}
+@media (prefers-color-scheme:dark){:root{--bg:#141716;--card:#1d2120;--ink:#e7ebe9;--muted:#9aa5a0;--line:#2f3533;--accent:#7cc4a0;--accent-soft:#22332b;--ans:#1a2722;--R:#9ca3af;--T1:#7fb2ea;--T2:#e0b24f;--I:#e88aa8}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+.wrap{max-width:900px;margin:0 auto;padding-block:24px 64px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1{font-size:1.6rem;margin:0 0 4px}
+.lead{color:var(--muted);margin:0 0 16px}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);padding:10px 0;display:flex;gap:6px;overflow-x:auto;border-bottom:1px solid var(--line)}
+.tab{flex:0 0 auto;border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:10px;padding:6px 12px;cursor:pointer;font:inherit;font-weight:600;text-align:left}
+.tab span{display:block;font-weight:400;font-size:.75rem;color:var(--muted)}
+.tab.active{background:var(--accent);border-color:var(--accent);color:#fff}.tab.active span{color:#e6f0ea}
+@media (prefers-color-scheme:dark){.tab.active{color:#0f1a14}.tab.active span{color:#1d3a2b}}
+.test{display:none}.test.active{display:block}
+.thead{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap;margin:22px 0 14px}
+.thead h2{margin:0;font-size:1.3rem}.sub{margin:2px 0;color:var(--muted)}.facts{margin:4px 0 0;font-size:.85rem;color:var(--muted)}
+.toggleall{border:1px solid var(--accent);background:transparent;color:var(--accent);border-radius:8px;padding:8px 12px;cursor:pointer;font:inherit;font-size:.9rem}
+.toggleall:hover{background:var(--accent-soft)}
+.q{display:flex;gap:14px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px;margin:0 0 14px}
+.qnum{flex:0 0 36px;font-weight:700;font-size:1.25rem;color:var(--accent);text-align:center;line-height:1.1}
+.qnum small{display:block;font-size:.7rem;color:var(--muted);font-weight:500;margin-top:4px}
+.qbody{flex:1;min-width:0}
+p{margin:0 0 6px}.nl{color:var(--muted);font-style:italic}p.nl{margin-bottom:10px}
+ul.en,ul.nl{margin:0 0 8px;padding-left:20px}
+.stem{margin-bottom:10px}
+.tablewrap{overflow-x:auto;margin:8px 0 12px}
+table{border-collapse:collapse;font-size:.88rem;min-width:100%}
+th,td{border:1px solid var(--line);padding:5px 8px;text-align:left;vertical-align:top}
+th{background:var(--accent-soft)}
+.part+.part{margin-top:10px}
+.ask{border:1px dashed transparent;border-radius:10px;padding:8px 10px;margin:0 -10px;cursor:pointer;transition:background .15s,border-color .15s}
+.ask:hover,.ask:focus-visible{background:var(--accent-soft);border-color:var(--accent);outline:none}
+.meta{display:flex;align-items:center;gap:8px;margin-bottom:6px;font-size:.8rem}
+.plabel{font-weight:700;font-size:.95rem}
+.tag{color:#fff;border-radius:6px;padding:1px 7px;font-weight:700}
+@media (prefers-color-scheme:dark){.tag{color:#111}}
+.tag-R{background:var(--R)}.tag-T1{background:var(--T1)}.tag-T2{background:var(--T2)}.tag-I{background:var(--I)}
+.pts{color:var(--muted);font-weight:600}
+.hint{margin-left:auto;color:var(--accent);font-size:.78rem}
+.ask[aria-expanded="true"] .hint::before{content:"▲ "}.ask[aria-expanded="false"] .hint::before{content:"▼ "}
+.answer{background:var(--ans);border-left:4px solid var(--accent);border-radius:8px;padding:10px 14px;margin:6px 0 4px}
+.ahead,.mhead{font-weight:700;font-size:.8rem;text-transform:uppercase;letter-spacing:.03em;color:var(--accent);margin-bottom:6px}
+.mhead{margin-top:8px}.para{float:right;text-transform:none;color:var(--muted);font-weight:500}
+.marks{margin:0;padding-left:18px;font-size:.9rem}.marks li{margin-bottom:4px}
+.note{font-size:.88rem;margin-top:8px}
+.grades{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 16px}
+.grades summary{cursor:pointer;font-weight:600}
+.gtable{display:grid;grid-template-columns:repeat(auto-fill,minmax(70px,1fr));gap:6px;margin-top:10px}
+.g{border:1px solid var(--line);border-radius:8px;padding:4px 6px;display:flex;justify-content:space-between;font-size:.88rem}.g span{color:var(--muted)}
+.legend{font-size:.82rem;color:var(--muted);margin:0 0 6px}
+@media (max-width:560px){.q{flex-direction:column;gap:6px}.qnum{text-align:left}.qnum small{display:inline;margin-left:6px}.hint{display:none}}
+@media print{nav,.toggleall,.hint,.answer,.grades{display:none!important}.test{display:block!important;page-break-after:always}body{background:#fff}.q{break-inside:avoid}}
+</style>
+<div class="wrap">
+<h1>Biologie H6 Ecologie · Oefentoetsen 3 vwo</h1>
+<p class="lead">Biology chapter 6 ecology · practice tests, very difficult level · Malmberg Biologie voor jou §6.1–6.8<br>
+<b>Click a question to see the answer.</b> · <em>Klik op een vraag om het antwoord te zien.</em></p>
+<p class="legend">RTTI: <span class="tag tag-R">R</span> reproduction · <span class="tag tag-T1">T1</span> trained application · <span class="tag tag-T2">T2</span> transfer · <span class="tag tag-I">I</span> insight</p>
+<nav><button class="tab active" data-target="t0">§6.1<span>Organismen en hun omgeving</span></button><button class="tab" data-target="t1">§6.2<span>Voedselrelaties en kringlopen</span></button><button class="tab" data-target="t2">§6.3<span>Samenleven</span></button><button class="tab" data-target="t3">§6.4<span>Natuurbeheer</span></button><button class="tab" data-target="t4">§6.5<span>Mens en milieu</span></button><button class="tab" data-target="t5">§6.6<span>Duurzaamheid</span></button><button class="tab" data-target="t6">§6.7<span>Energiestroom in een ecosysteem</span></button><button class="tab" data-target="t7">§6.8<span>Voedselproductie</span></button><button class="tab" data-target="t8">H6<span>Gecombineerde hoofdstuktoets (6.1–6.8)</span></button></nav>
+<section class="test active" id="t0">
+    <header class="thead">
+      <div>
+        <h2>Toets §6.1: Organismen en hun omgeving</h2>
+        <p class="sub">Test §6.1: Organisms and their environment</p>
+        <p class="facts">9 questions · 25 points · 25 min · R 3 · T1 5 · T2 9 · I 8</p>
+      </div>
+      <button class="toggleall" data-state="closed">Show all answers · <em>Alle antwoorden</em></button>
+    </header>
+    <article class="q"><div class="qnum">1<small>2p</small></div><div class="qbody"><div class="part">
+        <div class="ask" role="button" tabindex="0" aria-expanded="false">
+          <div class="meta"><span class="tag tag-R">R</span><span class="pts">2p</span><span class="hint">show answer · <em>toon antwoord</em></span></div>
+          <p class="en">Explain the difference between a biotope and a biome. Then explain the difference between a population and a community (levensgemeenschap).</p><p class="nl">Leg het verschil uit tussen een biotoop en een bioom. Leg daarna het verschil uit tussen een populatie en een levensgemeenschap.</p>
+        </div><div class="answer" hidden>
+        <div class="ahead">Answer · <em>Antwoord</em> <span class="para">§6.1</span></div>
+        <p class="en">A biotope is all the abiotic factors in a certain area; a biome is a large area within the biosphere with a characteristic climate (e.g. tundra). A population is a group of individuals of the same species in an area that reproduce with each other; a community is all the populations (of different species) in an area together.</p>
+        <p class="nl">Een biotoop is het geheel van alle abiotische factoren in een bepaald gebied; een bioom is een groot gebied binnen de biosfeer met een kenmerkend klimaat (bijv. toendra). Een populatie is een groep individuen van dezelfde soort in een gebied die zich onderling voortplanten; een levensgemeenschap is het geheel van alle populaties (van verschillende soorten) in een gebied.</p>
+        <div class="mhead">Marking · <em>Puntenverdeling</em></div>
+        <ul class="marks"><li><b>1p</b> correct difference biotope–biome<br><span class="nl">juist verschil biotoop–bioom</span></li><li><b>1p</b> correct difference population–community (same species vs. all species)<br><span class="nl">juist verschil populatie–levensgemeenschap (één soort vs. alle soorten)</span></li></ul>
+        
+      </div></div></div></article><article class="q"><div class="qnum">2<small>2p</small></div><div class="qbody"><div class="stem"><p class="en">Mouflons (wild mountain sheep) on the Veluwe are the only animals that eat the young shoots of Scots pine trees. Because of this, pine trees cannot take over the heathland.</p><p class="nl">Moeflons (wilde bergschapen) op de Veluwe zijn de enige dieren die de jonge scheuten van grove dennen eten. Daardoor kunnen de dennen de heidevelden niet overwoekeren.</p></div><div class="part">
+        <div class="ask" role="button" tabindex="0" aria-expanded="false">
+          <div class="meta"><span class="tag tag-T2">T2</span><span class="pts">2p</span><span class="hint">show answer · <em>toon antwoord</em></span></div>
+          <p class="en">Explain how the mouflons influence an abiotic factor for the heather plants. Name the abiotic factor.</p><p class="nl">Leg uit hoe de moeflons een abiotische factor voor de heideplanten beïnvloeden. Noem de abiotische factor.</p>
+        </div><div class="answer" hidden>
+        <div class="ahead">Answer · <em>Antwoord</em> <span class="para">§6.1</span></div>
+        <p class="en">By eating the young pine shoots, fewer pine trees grow up, so there is less shade on the heathland: the heather plants receive more light. Light is the abiotic factor.</p>
+        <p class="nl">Doordat de moeflons de jonge dennenscheuten eten, groeien er minder dennen op, waardoor er minder schaduw is: de heideplanten krijgen meer licht. Licht is de abiotische factor.</p>
+        <div class="mhead">Marking · <em>Puntenverdeling</em></div>
+        <ul class="marks"><li><b>1p</b> fewer pine trees / less shade<br><span class="nl">minder dennen / minder schaduw</span></li><li><b>1p</b> so more light for heather; light = abiotic factor<br><span class="nl">dus meer licht voor de heide; licht = abiotische factor</span></li></ul>
+        
+      </div></div></div></article>
+</div>
+<script>
+document.querySelectorAll('.tab').forEach(b=>b.addEventListener('click',()=>{
+  document.querySelectorAll('.tab').forEach(x=>x.classList.toggle('active',x===b));
+  document.querySelectorAll('.test').forEach(s=>s.classList.toggle('active',s.id===b.dataset.target));
+  window.scrollTo({top:0,behavior:'smooth'});
+}));
+function setOpen(ask,open){ask.setAttribute('aria-expanded',open);ask.nextElementSibling.hidden=!open;}
+document.querySelectorAll('.ask').forEach(a=>{
+  const t=()=>setOpen(a,a.getAttribute('aria-expanded')!=='true');
+  a.addEventListener('click',e=>{if(window.getSelection().toString())return;t();});
+  a.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();t();}});
+});
+document.querySelectorAll('.toggleall').forEach(b=>b.addEventListener('click',()=>{
+  const open=b.dataset.state==='closed';b.dataset.state=open?'open':'closed';
+  b.innerHTML=open?'Hide all answers · <em>Antwoorden verbergen</em>':'Show all answers · <em>Alle antwoorden</em>';
+  b.closest('.test').querySelectorAll('.ask').forEach(a=>setOpen(a,open));
+}));
+</script>
+</body></html>
